@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "beSQLSugar.Controllers.DeviceTypeControler",
+    "Method": "createDeviceType",
+    "RelativePath": "api/DeviceTypeControler",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.DTO.request.DeviceTypeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
