@@ -1,194 +1,206 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\",
+  "WorkspaceRootPath": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\herosection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\herosection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\herosectionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\herosectionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\controllers\\devicetypecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\controllers\\devicetypecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\productrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\productrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\analyticsvisitresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\analyticsvisitresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\analyticsvisitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\analyticsvisitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\analyticsvisit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\analyticsvisit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\partnerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\partnerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\partnerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\partnerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\contactresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\contactresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\contactrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\contactrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\productspecresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\productspecresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\productspecrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\productspecrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\productspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\productspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\productmediaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\productmediaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\productmediarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\productmediarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\productmedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\productmedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\deviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\deviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\herosectionproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\herosectionproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\herosectionproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\herosectionproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\herosectionproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\herosectionproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\herosectionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\herosectionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\devicetyperequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\devicetyperequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\adminuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\adminuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\adminuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\adminuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\services\\devicetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\services\\devicetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\services\\idevicetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\services\\idevicetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\infrastructure\\database\\sqlsugardbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\infrastructure\\database\\sqlsugardbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\services\\adminuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\services\\adminuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\serviceinterfaces\\iadminuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\serviceinterfaces\\iadminuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\api\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\api\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\handlers\\adminuserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\handlers\\adminuserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\handlers\\adminusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\handlers\\adminusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\commands\\updateadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\commands\\updateadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\commands\\createadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\commands\\createadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\queries\\getalladminuserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\queries\\getalladminuserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\queries\\getadminuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\queries\\getadminuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\commands\\deleteadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\commands\\deleteadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\mapping\\adminuserprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\mapping\\adminuserprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\infrastructure\\repositories\\adminuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\infrastructure\\repositories\\adminuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\repositoryinterfaces\\iadminuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\repositoryinterfaces\\iadminuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\repositoryinterfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\repositoryinterfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\herosection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\herosection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\herosectionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\herosectionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\productrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\productrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\analyticsvisitresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\analyticsvisitresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\analyticsvisitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\analyticsvisitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\analyticsvisit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\analyticsvisit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\partnerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\partnerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\partnerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\partnerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\contactresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\contactresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\contactrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\contactrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\productspecresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\productspecresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\productspecrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\productspecrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\productspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\productspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\productmediaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\productmediaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\productmediarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\productmediarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\productmedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\productmedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\herosectionproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\herosectionproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\herosectionproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\herosectionproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\herosectionproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\herosectionproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\herosectionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\herosectionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\response\\adminuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\response\\adminuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\application\\dtos\\request\\adminuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\application\\dtos\\request\\adminuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\domain\\enities\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\domain\\enities\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\intern-tacorp\\besqlsugar\\besqlsugar\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\devicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\devicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\mapping\\deviceprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\mapping\\deviceprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\enities\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\enities\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\response\\devicetyperesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\response\\devicetyperesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|d:\\td-study\\backend\\ta\\besqlsugar\\besqlsugar\\dto\\request\\devicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F00419EB-91D3-4575-BC1B-7AAEE421EF15}|beSQLSugar\\beSQLSugar.csproj|solutionrelative:besqlsugar\\dto\\request\\devicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -198,54 +210,276 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AnalyticsVisitResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\AnalyticsVisitResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\AnalyticsVisitResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\AnalyticsVisitResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\AnalyticsVisitResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AdminUserService.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Services\\AdminUserService.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Services\\AdminUserService.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Services\\AdminUserService.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Services\\AdminUserService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:35:26.704Z",
+              "WhenOpened": "2025-09-17T04:11:47.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminUserController.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\API\\AdminUserController.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\API\\AdminUserController.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\API\\AdminUserController.cs",
+              "RelativeToolTip": "beSQLSugar\\API\\AdminUserController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAuwEYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T04:05:00.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminUserQueryHandler.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Handlers\\AdminUserQueryHandler.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Handlers\\AdminUserQueryHandler.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Handlers\\AdminUserQueryHandler.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Handlers\\AdminUserQueryHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T04:01:43.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminUserCommandHandler.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Handlers\\AdminUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Handlers\\AdminUserCommandHandler.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Handlers\\AdminUserCommandHandler.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Handlers\\AdminUserCommandHandler.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:57:44.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Program.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Program.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Program.cs",
+              "RelativeToolTip": "beSQLSugar\\Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwCMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:53:23.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SqlSugarDbContext.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Infrastructure\\Database\\SqlSugarDbContext.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Infrastructure\\Database\\SqlSugarDbContext.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Infrastructure\\Database\\SqlSugarDbContext.cs",
+              "RelativeToolTip": "beSQLSugar\\Infrastructure\\Database\\SqlSugarDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:15:36.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateAdminUserCommand.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Commands\\UpdateAdminUserCommand.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Commands\\UpdateAdminUserCommand.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Commands\\UpdateAdminUserCommand.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Commands\\UpdateAdminUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:44:26.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAdminUserService.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\ServiceInterfaces\\IAdminUserService.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\ServiceInterfaces\\IAdminUserService.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\ServiceInterfaces\\IAdminUserService.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\ServiceInterfaces\\IAdminUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:28:06.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetAllAdminUserQuery.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Queries\\GetAllAdminUserQuery.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Queries\\GetAllAdminUserQuery.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Queries\\GetAllAdminUserQuery.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Queries\\GetAllAdminUserQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:56:50.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetAdminUserByIdQuery.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Queries\\GetAdminUserByIdQuery.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Queries\\GetAdminUserByIdQuery.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Queries\\GetAdminUserByIdQuery.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Queries\\GetAdminUserByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:49:08.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateAdminUserCommand.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Commands\\CreateAdminUserCommand.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Commands\\CreateAdminUserCommand.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Commands\\CreateAdminUserCommand.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Commands\\CreateAdminUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:42:42.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DeleteAdminUserCommand.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Commands\\DeleteAdminUserCommand.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Commands\\DeleteAdminUserCommand.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Commands\\DeleteAdminUserCommand.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Commands\\DeleteAdminUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:45:51.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ContactRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ContactRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\ContactRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ContactRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\ContactRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "Title": "AdminUserProfile.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Mapping\\AdminUserProfile.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\Mapping\\AdminUserProfile.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\Mapping\\AdminUserProfile.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\Mapping\\AdminUserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:31:08.477Z"
+              "WhenOpened": "2025-09-17T03:33:33.401Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
+              "Title": "AdminUserRepository.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Infrastructure\\Repositories\\AdminUserRepository.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Infrastructure\\Repositories\\AdminUserRepository.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Infrastructure\\Repositories\\AdminUserRepository.cs",
+              "RelativeToolTip": "beSQLSugar\\Infrastructure\\Repositories\\AdminUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:22:19.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IAdminUserRepository.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\RepositoryInterfaces\\IAdminUserRepository.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\RepositoryInterfaces\\IAdminUserRepository.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\RepositoryInterfaces\\IAdminUserRepository.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\RepositoryInterfaces\\IAdminUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T03:13:12.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\RepositoryInterfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\RepositoryInterfaces\\IRepository.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\RepositoryInterfaces\\IRepository.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\RepositoryInterfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:14:47.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Infrastructure\\Repositories\\BaseRepository.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "beSQLSugar\\Infrastructure\\Repositories\\BaseRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:17:00.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HeroSection.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\HeroSection.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\HeroSection.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\HeroSection.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\HeroSection.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA0wBYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T04:36:42.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "APIResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Common\\APIResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Common\\APIResponse.cs",
               "RelativeDocumentMoniker": "beSQLSugar\\Common\\APIResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Common\\APIResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Common\\APIResponse.cs",
               "RelativeToolTip": "beSQLSugar\\Common\\APIResponse.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwAQAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T09:51:42.425Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
+              "Title": "HeroSectionRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\HeroSectionRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\HeroSectionRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\HeroSectionRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\HeroSectionRequest.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA/wBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:16:10.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "ProductRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ProductRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\ProductRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ProductRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\ProductRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ProductRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\ProductRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ProductRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\ProductRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T09:23:50.95Z",
@@ -253,522 +487,380 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeviceTypeControler.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Controllers\\DeviceTypeControler.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Controllers\\DeviceTypeControler.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Controllers\\DeviceTypeControler.cs",
-              "RelativeToolTip": "beSQLSugar\\Controllers\\DeviceTypeControler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 28,
+              "Title": "ContactRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ContactRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\ContactRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ContactRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\ContactRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:50:06.914Z",
+              "WhenOpened": "2025-09-16T09:31:08.477Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HeroSectionRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\HeroSectionRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\HeroSectionRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\HeroSectionRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\HeroSectionRequest.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAwwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:16:10.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HeroSection.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\HeroSection.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\HeroSection.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\HeroSection.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\HeroSection.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAUwBYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T04:36:42.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ContactResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ContactResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\ContactResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ContactResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\ContactResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:31:38.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PartnerRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\PartnerRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\PartnerRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\PartnerRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\PartnerRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:32:53.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AnalyticsVisit.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\AnalyticsVisit.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\AnalyticsVisit.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\AnalyticsVisit.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\AnalyticsVisit.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAkwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T06:44:09.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PartnerResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\PartnerResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\PartnerResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\PartnerResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\PartnerResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:33:16.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AnalyticsVisitRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\AnalyticsVisitRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\AnalyticsVisitRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\AnalyticsVisitRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\AnalyticsVisitRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:35:01.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Partner.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Partner.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\Partner.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Partner.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\Partner.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T06:42:07.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProductResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ProductResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\ProductResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ProductResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\ProductResponse.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA4wBkAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:24:29.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Contact.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Contact.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\Contact.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Contact.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\Contact.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAA/wEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T06:40:05.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProductSpecResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ProductSpecResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\ProductSpecResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ProductSpecResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\ProductSpecResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:29:04.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ProductSpecRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ProductSpecRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\ProductSpecRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ProductSpecRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\ProductSpecRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:28:40.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ProductMediaResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ProductMediaResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\ProductMediaResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\ProductMediaResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\ProductMediaResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:27:03.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ProductSpec.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\ProductSpec.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\ProductSpec.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\ProductSpec.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\ProductSpec.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAowDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T06:28:06.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ProductMediaRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ProductMediaRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\ProductMediaRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\ProductMediaRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\ProductMediaRequest.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA5wBEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:26:30.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProductMedia.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\ProductMedia.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\ProductMedia.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\ProductMedia.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\ProductMedia.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T06:26:18.071Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "DeviceResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\DeviceResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\DeviceResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\DeviceResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\DeviceResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
+              "Title": "AnalyticsVisitResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\AnalyticsVisitResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\AnalyticsVisitResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\AnalyticsVisitResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\AnalyticsVisitResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:34:47.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CategoryResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\CategoryResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\CategoryResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\CategoryResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\CategoryResponse.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:22:09.644Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Product.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\Product.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Product.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\Product.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T06:15:14.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CategoryRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\CategoryRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\CategoryRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\CategoryRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\CategoryRequest.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA5wBIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:21:39.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "HeroSectionProductResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\HeroSectionProductResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\HeroSectionProductResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\HeroSectionProductResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\HeroSectionProductResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:19:47.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Category.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\Category.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Category.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\Category.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAA9wD4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T04:55:40.996Z"
+              "WhenOpened": "2025-09-16T09:35:26.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "HeroSectionProductRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\HeroSectionProductRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\HeroSectionProductRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\HeroSectionProductRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\HeroSectionProductRequest.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA5wA8AAAAsAAAAAAAAAA==",
+              "Title": "ContactResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ContactResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\ContactResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ContactResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\ContactResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:19:17.547Z"
+              "WhenOpened": "2025-09-16T09:31:38.859Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "HeroSectionResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\HeroSectionResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\HeroSectionResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\HeroSectionResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\HeroSectionResponse.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBkAAABDAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "PartnerRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\PartnerRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\PartnerRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\PartnerRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\PartnerRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:16:50.585Z"
+              "WhenOpened": "2025-09-16T09:32:53.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "HeroSectionProduct.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\HeroSectionProduct.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\HeroSectionProduct.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\HeroSectionProduct.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\HeroSectionProduct.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "AnalyticsVisit.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\AnalyticsVisit.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\AnalyticsVisit.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\AnalyticsVisit.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\AnalyticsVisit.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T06:36:42.244Z"
+              "WhenOpened": "2025-09-16T06:44:09.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PartnerResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\PartnerResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\PartnerResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\PartnerResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\PartnerResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:33:16.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AnalyticsVisitRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\AnalyticsVisitRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\AnalyticsVisitRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\AnalyticsVisitRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\AnalyticsVisitRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:35:01.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Partner.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Partner.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\Partner.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Partner.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\Partner.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T06:42:07.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "DeviceTypeRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\DeviceTypeRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\DeviceTypeRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\DeviceTypeRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\DeviceTypeRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Title": "ProductResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ProductResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\ProductResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ProductResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\ProductResponse.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA2wBkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:34:16.997Z"
+              "WhenOpened": "2025-09-16T09:24:29.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Contact.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\Contact.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Contact.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\Contact.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T06:40:05.846Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "AdminUserResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\AdminUserResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\AdminUserResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\AdminUserResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\AdminUserResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Title": "ProductSpecResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ProductSpecResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\ProductSpecResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ProductSpecResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\ProductSpecResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:11:54.74Z"
+              "WhenOpened": "2025-09-16T09:29:04.728Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "AdminUserRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\AdminUserRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\AdminUserRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\AdminUserRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\AdminUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA9AAAAAAAAAA==",
+              "Title": "ProductSpecRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ProductSpecRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\ProductSpecRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ProductSpecRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\ProductSpecRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:09:43.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Repository\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Repository\\BaseRepository.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Repository\\BaseRepository.cs",
-              "RelativeToolTip": "beSQLSugar\\Repository\\BaseRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAswCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:17:00.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "DbContext.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Data\\DbContext.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Data\\DbContext.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Data\\DbContext.cs",
-              "RelativeToolTip": "beSQLSugar\\Data\\DbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:15:36.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "IDeviceTypeService.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Services\\IDeviceTypeService.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Services\\IDeviceTypeService.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Services\\IDeviceTypeService.cs",
-              "RelativeToolTip": "beSQLSugar\\Services\\IDeviceTypeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:28:45.137Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "DeviceType.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\DeviceType.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\DeviceType.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\DeviceType.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\DeviceType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T08:52:04.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Program.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Program.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Program.cs",
-              "RelativeToolTip": "beSQLSugar\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:53:23.586Z"
+              "WhenOpened": "2025-09-16T09:28:40.477Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "DeviceTypeService.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Services\\DeviceTypeService.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Services\\DeviceTypeService.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Services\\DeviceTypeService.cs",
-              "RelativeToolTip": "beSQLSugar\\Services\\DeviceTypeService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswCkAAAAvAAAAAAAAAA==",
+              "Title": "ProductMediaResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ProductMediaResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\ProductMediaResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\ProductMediaResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\ProductMediaResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:28:02.465Z"
+              "WhenOpened": "2025-09-16T09:27:03.05Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "AdminUser.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\AdminUser.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\AdminUser.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\AdminUser.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\AdminUser.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBQAAAAAAAAAAAAAAA==",
+              "Title": "ProductSpec.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\ProductSpec.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\ProductSpec.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\ProductSpec.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\ProductSpec.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAowDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T04:07:56.981Z"
+              "WhenOpened": "2025-09-16T06:28:06.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProductMediaRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ProductMediaRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\ProductMediaRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\ProductMediaRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\ProductMediaRequest.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:26:30.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProductMedia.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\ProductMedia.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\ProductMedia.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\ProductMedia.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\ProductMedia.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T06:26:18.071Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 37,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Repository\\IRepository.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Repository\\IRepository.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Repository\\IRepository.cs",
-              "RelativeToolTip": "beSQLSugar\\Repository\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "CategoryResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\CategoryResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\CategoryResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\CategoryResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\CategoryResponse.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA0wBYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:14:47.287Z"
+              "WhenOpened": "2025-09-16T09:22:09.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\appsettings.json",
-              "RelativeDocumentMoniker": "beSQLSugar\\appsettings.json",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\appsettings.json",
-              "RelativeToolTip": "beSQLSugar\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-12T10:01:47.155Z"
+              "DocumentIndex": 38,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Product.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\Product.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Product.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\Product.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAA7wEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T06:15:14.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CategoryRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\CategoryRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\CategoryRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\CategoryRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\CategoryRequest.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:21:39.882Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 41,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "beSQLSugar\\appsettings.Development.json",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\appsettings.Development.json",
-              "RelativeToolTip": "beSQLSugar\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-16T06:59:33.465Z"
+              "Title": "HeroSectionProductResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\HeroSectionProductResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\HeroSectionProductResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\HeroSectionProductResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\HeroSectionProductResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:19:47.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Category.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\Category.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\Category.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\Category.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T04:55:40.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "HeroSectionProductRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\HeroSectionProductRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\HeroSectionProductRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\HeroSectionProductRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\HeroSectionProductRequest.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:19:17.547Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 44,
-              "Title": "Device.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Device.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Enities\\Device.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Enities\\Device.cs",
-              "RelativeToolTip": "beSQLSugar\\Enities\\Device.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAIAAAAAAAAAA==",
+              "Title": "HeroSectionResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\HeroSectionResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\HeroSectionResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\HeroSectionResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\HeroSectionResponse.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA3wBkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T08:51:50.678Z"
+              "WhenOpened": "2025-09-16T09:16:50.585Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 43,
-              "Title": "DeviceProfile.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Mapping\\DeviceProfile.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\Mapping\\DeviceProfile.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\Mapping\\DeviceProfile.cs",
-              "RelativeToolTip": "beSQLSugar\\Mapping\\DeviceProfile.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAUwA8AAAAvAAAAAAAAAA==",
+              "Title": "HeroSectionProduct.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\HeroSectionProduct.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\HeroSectionProduct.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\HeroSectionProduct.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\HeroSectionProduct.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:32:24.626Z"
+              "WhenOpened": "2025-09-16T06:36:42.244Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 45,
-              "Title": "DeviceTypeResponse.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\DeviceTypeResponse.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\response\\DeviceTypeResponse.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\response\\DeviceTypeResponse.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\response\\DeviceTypeResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Title": "AdminUserResponse.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\AdminUserResponse.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\response\\AdminUserResponse.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\response\\AdminUserResponse.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\response\\AdminUserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:34:53.527Z"
+              "WhenOpened": "2025-09-16T09:11:54.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 46,
-              "Title": "DeviceRequest.cs",
-              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\DeviceRequest.cs",
-              "RelativeDocumentMoniker": "beSQLSugar\\DTO\\request\\DeviceRequest.cs",
-              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\DTO\\request\\DeviceRequest.cs",
-              "RelativeToolTip": "beSQLSugar\\DTO\\request\\DeviceRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Title": "AdminUserRequest.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\AdminUserRequest.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Application\\DTOs\\request\\AdminUserRequest.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Application\\DTOs\\request\\AdminUserRequest.cs",
+              "RelativeToolTip": "beSQLSugar\\Application\\DTOs\\request\\AdminUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:32:21.581Z"
+              "WhenOpened": "2025-09-16T09:09:43.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "AdminUser.cs",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\AdminUser.cs",
+              "RelativeDocumentMoniker": "beSQLSugar\\Domain\\Enities\\AdminUser.cs",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\Domain\\Enities\\AdminUser.cs",
+              "RelativeToolTip": "beSQLSugar\\Domain\\Enities\\AdminUser.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T04:07:56.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\appsettings.json",
+              "RelativeDocumentMoniker": "beSQLSugar\\appsettings.json",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\appsettings.json",
+              "RelativeToolTip": "beSQLSugar\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-12T10:01:47.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "beSQLSugar\\appsettings.Development.json",
+              "ToolTip": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\appsettings.Development.json",
+              "RelativeToolTip": "beSQLSugar\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-16T06:59:33.465Z",
+              "EditorCaption": ""
             }
           ]
         }

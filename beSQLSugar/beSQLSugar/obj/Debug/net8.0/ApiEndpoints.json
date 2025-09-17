@@ -1,15 +1,118 @@
 [
   {
-    "ContainingType": "beSQLSugar.Controllers.DeviceTypeControler",
-    "Method": "createDeviceType",
-    "RelativePath": "api/DeviceTypeControler",
+    "ContainingType": "beSQLSugar.API.AdminUserController",
+    "Method": "GetAll",
+    "RelativePath": "api/AdminUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.AdminUserController",
+    "Method": "Create",
+    "RelativePath": "api/AdminUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "beSQLSugar.DTO.request.DeviceTypeRequest",
+        "Type": "beSQLSugar.Application.DTO.request.AdminUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Application.DTO.response.AdminUserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.AdminUserController",
+    "Method": "GetById",
+    "RelativePath": "api/AdminUser/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Application.DTO.response.AdminUserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.AdminUserController",
+    "Method": "Update",
+    "RelativePath": "api/AdminUser/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.DTO.request.AdminUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Application.DTO.response.AdminUserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.AdminUserController",
+    "Method": "Delete",
+    "RelativePath": "api/AdminUser/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

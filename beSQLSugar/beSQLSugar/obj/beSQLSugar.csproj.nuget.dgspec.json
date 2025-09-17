@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj": {}
+    "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj": {}
   },
   "projects": {
-    "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj": {
+    "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj",
+        "projectUniqueName": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj",
         "projectName": "beSQLSugar",
-        "projectPath": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj",
+        "projectPath": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\beSQLSugar.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\Td-study\\BackEnd\\TA\\beSQLSugar\\beSQLSugar\\obj\\",
+        "outputPath": "D:\\Td-study\\BackEnd\\TA\\intern-tacorp\\beSQLSugar\\beSQLSugar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,18 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[13.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             },
             "SqlSugarCore": {
               "target": "Package",

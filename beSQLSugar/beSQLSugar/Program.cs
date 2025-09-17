@@ -1,7 +1,11 @@
-using beSQLSugar.Data;
-using beSQLSugar.Repository;
-using beSQLSugar.Services;
 using AutoMapper;
+using beSQLSugar.Application.ServiceInterfaces;
+using beSQLSugar.Application.Services;
+using beSQLSugar.Domain.Interfaces;
+using beSQLSugar.Domain.RepositoryInterfaces;
+using beSQLSugar.Infrastructure.Database;
+using beSQLSugar.Infrastructure.Repositories;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,13 +20,21 @@ builder.Services.AddSwaggerGen();
 // Auto Mapper Configurations
 builder.Services.AddAutoMapper(typeof(Program));
 
+
 // Add SQLSugar
-builder.Services.AddScoped<DbContext>();
+builder.Services.AddScoped<SqlSugarDbContext>();
 
+// Add Repositories and Services
 builder.Services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+builder.Services.AddScoped<IAdminUserRepository, AdminUserRepository>();
+builder.Services.AddScoped<IAdminUserService, AdminUserService>();
 
+// Mediator
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(beSQLSugar.Application.Commands.CreateAdminUserCommand).Assembly);
+});
 
-builder.Services.AddScoped<IDeviceTypeService, DeviceTypeService>();
 
 
 var app = builder.Build();
