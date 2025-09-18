@@ -1,9 +1,9 @@
 ﻿using beSQLSugar.Application.DTO.response;
-using beSQLSugar.Application.Queries;
+using beSQLSugar.Application.Queries.AdminUsers;
 using beSQLSugar.Application.ServiceInterfaces;
 using MediatR;
 
-namespace beSQLSugar.Application.Handlers
+namespace beSQLSugar.Application.Handlers.AdminUsers
 {
     public class AdminUserQueryHandler : IRequestHandler<GetAdminUserByIdQuery, AdminUserResponse?>,
         IRequestHandler<GetAllAdminUsersQuery, List<AdminUserResponse>>

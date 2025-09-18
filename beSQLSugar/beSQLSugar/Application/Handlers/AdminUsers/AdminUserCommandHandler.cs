@@ -1,9 +1,9 @@
-﻿using beSQLSugar.Application.Commands;
+﻿using beSQLSugar.Application.Commands.AdminUsers;
 using beSQLSugar.Application.DTO.response;
 using beSQLSugar.Application.ServiceInterfaces;
 using MediatR;
 
-namespace beSQLSugar.Application.Handlers
+namespace beSQLSugar.Application.Handlers.AdminUsers
 {
     public class AdminUserCommandHandler : IRequestHandler<CreateAdminUserCommand, AdminUserResponse>,
         IRequestHandler<UpdateAdminUserCommand, AdminUserResponse?>,

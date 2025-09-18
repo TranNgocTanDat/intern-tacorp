@@ -1,4 +1,5 @@
 using AutoMapper;
+using beSQLSugar.Application.Commands.AdminUsers;
 using beSQLSugar.Application.ServiceInterfaces;
 using beSQLSugar.Application.Services;
 using beSQLSugar.Domain.Interfaces;
@@ -6,6 +7,9 @@ using beSQLSugar.Domain.RepositoryInterfaces;
 using beSQLSugar.Infrastructure.Database;
 using beSQLSugar.Infrastructure.Repositories;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,10 +33,36 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
 builder.Services.AddScoped<IAdminUserRepository, AdminUserRepository>();
 builder.Services.AddScoped<IAdminUserService, AdminUserService>();
 
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IJWTService, JWTService>();
+
 // Mediator
 builder.Services.AddMediatR(cfg =>
 {
-    cfg.RegisterServicesFromAssembly(typeof(beSQLSugar.Application.Commands.CreateAdminUserCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(CreateAdminUserCommand).Assembly);
+});
+
+// Jwt auth
+var key = builder.Configuration["Jwt:Key"] ?? throw new Exception("Jwt:Key missing");
+var issuer = builder.Configuration["Jwt:Issuer"];
+var audience = builder.Configuration["Jwt:Audience"];
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = issuer,
+        ValidAudience = audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+    };
 });
 
 
@@ -48,6 +78,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

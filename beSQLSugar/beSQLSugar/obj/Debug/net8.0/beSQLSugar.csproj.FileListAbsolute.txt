@@ -231,3 +231,4 @@ D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\obj\Debug\net8.0\refi
 D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\obj\Debug\net8.0\beSQLSugar.pdb
 D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\obj\Debug\net8.0\beSQLSugar.genruntimeconfig.cache
 D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\obj\Debug\net8.0\ref\beSQLSugar.dll
+D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

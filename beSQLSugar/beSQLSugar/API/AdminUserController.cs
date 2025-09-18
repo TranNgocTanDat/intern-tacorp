@@ -1,7 +1,9 @@
 ﻿using beSQLSugar.Application.Commands;
+using beSQLSugar.Application.Commands.AdminUsers;
 using beSQLSugar.Application.DTO.request;
 using beSQLSugar.Application.DTO.response;
 using beSQLSugar.Application.Queries;
+using beSQLSugar.Application.Queries.AdminUsers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
