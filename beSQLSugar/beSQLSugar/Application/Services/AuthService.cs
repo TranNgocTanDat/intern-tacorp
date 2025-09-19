@@ -25,7 +25,7 @@ namespace beSQLSugar.Application.Services
                 throw new UnauthorizedAccessException("Invalid username or password.");
             }
 
-            if (!string.Equals(user.Username, "admin", StringComparison.OrdinalIgnoreCase))
+            if (user.Role != "Admin")
                 throw new UnauthorizedAccessException("Only admin can login");
 
             if (!BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
@@ -42,7 +42,8 @@ namespace beSQLSugar.Application.Services
                     Id = user.Id,
                     Username = user.Username,
                     FullName = user.FullName,
-                    Email = user.Email
+                    Email = user.Email,
+                    Role = user.Role
                 }
             };
         }

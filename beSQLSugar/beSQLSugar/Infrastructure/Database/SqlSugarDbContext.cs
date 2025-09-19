@@ -19,6 +19,7 @@ namespace beSQLSugar.Infrastructure.Database
             });
 
             Db.CodeFirst.InitTables(typeof(AdminUser));
+            Db.CodeFirst.InitTables(typeof(HeroSection));
         }
     }
 }

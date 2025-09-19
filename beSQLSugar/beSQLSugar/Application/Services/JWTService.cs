@@ -18,8 +18,8 @@ namespace beSQLSugar.Application.Services
         public (string Token, long ExpiresInSeconds) GenerateToken(AdminUser user)
         {
             var key = _cfg["Jwt:Key"] ?? throw new Exception("Jwt:Key not configured");
-            var issuer = _cfg["Jwt:Issuer"] ?? "beSQLSugar";
-            var audience = _cfg["Jwt:Audience"] ?? "beSQLSugarClient";
+            var issuer = _cfg["Jwt:Issuer"] ?? throw new Exception("Jwt:Issuer not configured");
+            var audience = _cfg["Jwt:Audience"] ?? throw new Exception("Jwt:Audience not configured");
             var minutes = int.TryParse(_cfg["Jwt:ExpireMinutes"], out var m) ? m : 60;
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
@@ -28,7 +28,8 @@ namespace beSQLSugar.Application.Services
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Username),
                 new Claim("uid", user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.FullName ?? string.Empty)
+                new Claim(ClaimTypes.Name, user.FullName ?? string.Empty),
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             var now = DateTime.UtcNow;

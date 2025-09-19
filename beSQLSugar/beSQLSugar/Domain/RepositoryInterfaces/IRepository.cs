@@ -1,5 +1,6 @@
 ﻿namespace beSQLSugar.Domain.Interfaces
 {
+    // Tạo repository interface chung cho các entity với các phương thức CRUD cơ bản
     public interface IRepository<T> where T : class, new()
     {
         Task<List<T>> GetAllAsync();

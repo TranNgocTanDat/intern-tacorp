@@ -13,18 +13,20 @@ namespace beSQLSugar.Domain.Enities
         [SugarColumn(Length = 256, IsNullable = false)]
         public string PasswordHash { get; set; } = string.Empty;
 
-        [SugarColumn(Length =150)]
+        [SugarColumn(Length = 150)]
         public string? FullName { get; set; }
 
         [SugarColumn(Length = 200)]
         public string? Email { get; set; }
 
-        [SugarColumn(Length =20)]
+        [SugarColumn(Length = 20)]
         public string? Phone { get; set; }
 
         [SugarColumn(DefaultValue = "1")]
         public bool IsActive { get; set; }
 
+        [SugarColumn(Length = 50, IsNullable = false, DefaultValue = "Admin")]
+        public string Role { get; set; } = "Admin";
 
     }
 }
