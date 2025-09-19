@@ -14,4 +14,13 @@ export interface AdminUserResponse {
   email?: string;
   phone?: string;
   isActive: boolean;
+  role: string;
+}
+
+export interface AdminUserSearchRequest {
+  username?: string;
+  fullName?: string;
+  email?: string;
+  phone?: string;
+  isActive?: boolean;
 }

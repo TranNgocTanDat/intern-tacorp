@@ -29,6 +29,11 @@ body {
   min-height: 100vh;
 }
 
+/* Ensure element-plus dialogs overlay above app content */
+.el-overlay, .el-dialog__wrapper {
+  z-index: 3000 !important;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
