@@ -8,7 +8,7 @@ namespace beSQLSugar.Application.DTOs.response
         public string TokenType { get; set; } = "Bearer";
         public long ExpiresIn { get; set; } // seconds
 
-        public AdminUserResponse AdminUser { get; set; }
+        public required AdminUserResponse AdminUser { get; set; }
 
     }
 }

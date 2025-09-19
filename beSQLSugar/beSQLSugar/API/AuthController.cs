@@ -1,5 +1,7 @@
-﻿using beSQLSugar.Application.Commands.Login;
-using beSQLSugar.Application.DTOs.request;
+﻿using beSQLSugar.Application.DTOs.request;
+using beSQLSugar.Application.DTOs.response;
+using beSQLSugar.Application.Features.Login.Commands;
+using beSQLSugar.Common;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,17 +20,17 @@ namespace beSQLSugar.API
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        public async Task<APIResponse<LoginResponse>> Login([FromBody] LoginRequest request)
         {
             try
             {
                 var cmd = new LoginCommand(request);
                 var resp = await _mediator.Send(cmd);
-                return Ok(resp);
+                return APIResponse<LoginResponse>.Success(resp);
             }
             catch (System.UnauthorizedAccessException ex)
             {
-                return Unauthorized(new { message = ex.Message });
+                return APIResponse<LoginResponse>.Unauthorized(ex.Message);
             }
         }
 
