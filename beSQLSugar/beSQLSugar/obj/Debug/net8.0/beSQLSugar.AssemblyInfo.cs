@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("beSQLSugar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6641cb024311de256a04ab861a38f668930f82b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f429509885bafeb2d20b895b3d5aea846f464f44")]
 [assembly: System.Reflection.AssemblyProductAttribute("beSQLSugar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("beSQLSugar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4,9 +4,8 @@
     {
         public string? Title { get; set; }
         public string? Description { get; set; }
-        public string? HeroMediaUrl { get; set; }
+        public IFormFile? HeroMediaFile { get; set; }
         public string? PageHero { get; set; }
-        public string? HeroMediaType { get; set; }
         public bool IsPublished { get; set; } = false;
         public DateTime? PublishFrom { get; set; }
         public DateTime? PublishTo { get; set; }

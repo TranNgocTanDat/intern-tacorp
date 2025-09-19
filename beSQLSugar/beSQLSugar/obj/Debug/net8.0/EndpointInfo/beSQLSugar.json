@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "beSQLSugar",
-    "version": "1.0"
+    "title": "beSQLSugar API",
+    "version": "v1"
   },
   "paths": {
-    "/api/AdminUser/{id}": {
+    "/api/admin-users/{id}": {
       "get": {
         "tags": [
           "AdminUser"
@@ -27,17 +27,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               }
             }
@@ -84,17 +84,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               }
             }
@@ -123,7 +123,7 @@
         }
       }
     },
-    "/api/AdminUser": {
+    "/api/admin-users": {
       "get": {
         "tags": [
           "AdminUser"
@@ -134,26 +134,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AdminUserResponse"
-                  }
+                  "$ref": "#/components/schemas/AdminUserResponseListAPIResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AdminUserResponse"
-                  }
+                  "$ref": "#/components/schemas/AdminUserResponseListAPIResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AdminUserResponse"
-                  }
+                  "$ref": "#/components/schemas/AdminUserResponseListAPIResponse"
                 }
               }
             }
@@ -189,17 +180,83 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdminUserResponse"
+                  "$ref": "#/components/schemas/AdminUserResponseAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin-users/search": {
+      "get": {
+        "tags": [
+          "AdminUser"
+        ],
+        "parameters": [
+          {
+            "name": "Username",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FullName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Phone",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserResponseListAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserResponseListAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserResponseListAPIResponse"
                 }
               }
             }
@@ -233,7 +290,24 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseAPIResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -246,6 +320,601 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hero-section": {
+      "post": {
+        "tags": [
+          "HeroSection"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Title": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "HeroMediaFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "PageHero": {
+                    "type": "string"
+                  },
+                  "IsPublished": {
+                    "type": "boolean"
+                  },
+                  "PublishFrom": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "PublishTo": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "CreateUid": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "WriteIUid": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Note": {
+                    "type": "string"
+                  },
+                  "Option1": {
+                    "type": "string"
+                  },
+                  "Option2": {
+                    "type": "string"
+                  },
+                  "Option3": {
+                    "type": "string"
+                  },
+                  "Option4": {
+                    "type": "string"
+                  },
+                  "Option5": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Title": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "HeroMediaFile": {
+                  "style": "form"
+                },
+                "PageHero": {
+                  "style": "form"
+                },
+                "IsPublished": {
+                  "style": "form"
+                },
+                "PublishFrom": {
+                  "style": "form"
+                },
+                "PublishTo": {
+                  "style": "form"
+                },
+                "CreateUid": {
+                  "style": "form"
+                },
+                "WriteIUid": {
+                  "style": "form"
+                },
+                "UpdateTime": {
+                  "style": "form"
+                },
+                "Note": {
+                  "style": "form"
+                },
+                "Option1": {
+                  "style": "form"
+                },
+                "Option2": {
+                  "style": "form"
+                },
+                "Option3": {
+                  "style": "form"
+                },
+                "Option4": {
+                  "style": "form"
+                },
+                "Option5": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "HeroSection"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hero-section/{id}": {
+      "put": {
+        "tags": [
+          "HeroSection"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Title": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "HeroMediaFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "PageHero": {
+                    "type": "string"
+                  },
+                  "IsPublished": {
+                    "type": "boolean"
+                  },
+                  "PublishFrom": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "PublishTo": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "CreateUid": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "WriteIUid": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Note": {
+                    "type": "string"
+                  },
+                  "Option1": {
+                    "type": "string"
+                  },
+                  "Option2": {
+                    "type": "string"
+                  },
+                  "Option3": {
+                    "type": "string"
+                  },
+                  "Option4": {
+                    "type": "string"
+                  },
+                  "Option5": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Title": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "HeroMediaFile": {
+                  "style": "form"
+                },
+                "PageHero": {
+                  "style": "form"
+                },
+                "IsPublished": {
+                  "style": "form"
+                },
+                "PublishFrom": {
+                  "style": "form"
+                },
+                "PublishTo": {
+                  "style": "form"
+                },
+                "CreateUid": {
+                  "style": "form"
+                },
+                "WriteIUid": {
+                  "style": "form"
+                },
+                "UpdateTime": {
+                  "style": "form"
+                },
+                "Note": {
+                  "style": "form"
+                },
+                "Option1": {
+                  "style": "form"
+                },
+                "Option2": {
+                  "style": "form"
+                },
+                "Option3": {
+                  "style": "form"
+                },
+                "Option4": {
+                  "style": "form"
+                },
+                "Option5": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "HeroSection"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "HeroSection"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hero-section/dateRange": {
+      "get": {
+        "tags": [
+          "HeroSection"
+        ],
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hero-section/pageHero/{pageHero}": {
+      "get": {
+        "tags": [
+          "HeroSection"
+        ],
+        "parameters": [
+          {
+            "name": "pageHero",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hero-section/published": {
+      "get": {
+        "tags": [
+          "HeroSection"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hero-section/search": {
+      "get": {
+        "tags": [
+          "HeroSection"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hero-section/{id}/with-products": {
+      "get": {
+        "tags": [
+          "HeroSection"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -307,6 +976,253 @@
           },
           "isActive": {
             "type": "boolean"
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUserResponseAPIResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AdminUserResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUserResponseListAPIResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminUserResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanAPIResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HeroSectionProduct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "heroSectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createUid": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "writeIUid": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "option1": {
+            "type": "string",
+            "nullable": true
+          },
+          "option2": {
+            "type": "string",
+            "nullable": true
+          },
+          "option3": {
+            "type": "string",
+            "nullable": true
+          },
+          "option4": {
+            "type": "string",
+            "nullable": true
+          },
+          "option5": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HeroSectionResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "heroMediaUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageHero": {
+            "type": "string",
+            "nullable": true
+          },
+          "heroMediaType": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPublished": {
+            "type": "boolean"
+          },
+          "publishFrom": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "publishTo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createUid": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "writeIUid": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "option1": {
+            "type": "string",
+            "nullable": true
+          },
+          "option2": {
+            "type": "string",
+            "nullable": true
+          },
+          "option3": {
+            "type": "string",
+            "nullable": true
+          },
+          "option4": {
+            "type": "string",
+            "nullable": true
+          },
+          "option5": {
+            "type": "string",
+            "nullable": true
+          },
+          "heroProducts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HeroSectionProduct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HeroSectionResponseAPIResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/HeroSectionResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HeroSectionResponseListAPIResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HeroSectionResponse"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -324,7 +1240,61 @@
           }
         },
         "additionalProperties": false
+      },
+      "LoginResponse": {
+        "required": [
+          "adminUser"
+        ],
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "tokenType": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiresIn": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "adminUser": {
+            "$ref": "#/components/schemas/AdminUserResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginResponseAPIResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/LoginResponse"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Nhập JWT token theo format: Bearer {token}",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
       }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
