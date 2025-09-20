@@ -8,6 +8,7 @@ using beSQLSugar.Infrastructure.Database;
 using beSQLSugar.Infrastructure.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -113,6 +114,8 @@ builder.Services.AddCors(option =>
     });
 });
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -121,6 +124,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Cho phép truy cập file tĩnh (wwwroot)
+app.UseStaticFiles();
 
 app.UseCors("AllowFrontend");
 

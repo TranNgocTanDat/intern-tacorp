@@ -1,5 +1,6 @@
 ﻿using beSQLSugar.Application.DTO.request;
 using beSQLSugar.Application.DTO.response;
+using beSQLSugar.Application.DTOs.request;
 using beSQLSugar.Application.Features.HeroSection.Commands;
 using beSQLSugar.Application.Features.HeroSection.Queries;
 using beSQLSugar.Common;
@@ -96,56 +97,14 @@ namespace beSQLSugar.API
             return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy danh sách thành công");
         }
 
-        // Lấy danh sách theo thời điêm
-        [HttpGet("dateRange")]
-        public async Task<APIResponse<List<HeroSectionResponse>>> GetHeroSectionByDateRange([FromQuery] DateTime from, [FromQuery] DateTime to)
+        // Filter HeroSection theo các tiêu chí trong request
+        [HttpGet("filter")]
+        public async Task<APIResponse<List<HeroSectionResponse>>> FilterHeroSections([FromQuery] HeroSectionFilterRequest request)
         {
-            var query = new GetHeroSectionByDateRangeQuery(from, to);
+            var query = new FilterHeroSectionQuery(request);
             var result = await _mediator.Send(query);
             return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy dữ liệu thành công.");
         }
-
-        // Lấy danh sách theo pageHero
-        [HttpGet("pageHero/{pageHero}")]
-        public async Task<APIResponse<List<HeroSectionResponse>>> GetHeroSectionByPageHero(string pageHero)
-        {
-            var query = new GetHeroSectionByPageHeroQuery(pageHero);
-            var result = await _mediator.Send(query);
-            return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy dữ liệu thành công.");
-        }
-
-        // Lấy danh sách HeroSection đang được public
-        [HttpGet("published")]
-        public async Task<APIResponse<List<HeroSectionResponse>>> GetPublishedHeroSections()
-        {
-            var query = new GetPublishedHeroSectionQuery();
-            var result = await _mediator.Send(query);
-            return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy dữ liệu thành công.");
-        }
-
-        // Tìm kiếm HeroSection theo từ khóa
-        [HttpGet("search")]
-        public async Task<APIResponse<List<HeroSectionResponse>>> SearchHeroSections([FromQuery] string keyword)
-        {
-            var query = new SearchHeroSectionQuery(keyword);
-            var result = await _mediator.Send(query);
-            return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy dữ liệu thành công.");
-        }
-
-        // Lấy HeroSection cùng với danh sách HeroProduct liên quan
-        [HttpGet("{id}/with-products")]
-        public async Task<APIResponse<HeroSectionResponse?>> GetHeroSectionWithProducts(int id)
-        {
-            var query = new GetHeroSectionWithProductsQuery(id);
-            var result = await _mediator.Send(query);
-            if (result == null)
-            {
-                return APIResponse<HeroSectionResponse?>.NotFound("Không tìm thấy Hero section với ID này.");
-            }
-            return APIResponse<HeroSectionResponse?>.Success(result, "Lấy dữ liệu thành công.");
-        }
-
-
 
     }
 }

@@ -2,10 +2,10 @@
 {
     public class HeroSectionRequest
     {
-        public string? Title { get; set; }
-        public string? Description { get; set; }
-        public IFormFile? HeroMediaFile { get; set; }
-        public string? PageHero { get; set; }
+        public string? Title { get; set; } = string.Empty;
+        public string? Description { get; set; } = string.Empty;
+        public IFormFile? HeroMediaFile { get; set; } 
+        public string? PageHero { get; set; } = string.Empty;
         public bool IsPublished { get; set; } = false;
         public DateTime? PublishFrom { get; set; }
         public DateTime? PublishTo { get; set; }

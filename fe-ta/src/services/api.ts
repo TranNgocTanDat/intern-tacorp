@@ -4,15 +4,40 @@ import axios, { type AxiosRequestConfig } from "axios";
 
 // Lấy từ biến môi trường trong Vite
 const DOMAIN = "http://localhost:5271/api";
+const BASE_URL = "http://localhost:5271";
 
 const api = axios.create({
   proxy: false,
   baseURL: DOMAIN,
 });
 
+function resolveMediaUrl(obj: any): any {
+  if (!obj) return obj;
+
+  if (Array.isArray(obj)) {
+    return obj.map(resolveMediaUrl);
+  }
+
+  if (typeof obj === "object") {
+    if (obj.heroMediaUrl && !obj.heroMediaUrl.startsWith("http")) {
+      obj.heroMediaUrl = BASE_URL + obj.heroMediaUrl;
+    }
+    for (const key in obj) {
+      obj[key] = resolveMediaUrl(obj[key]);
+    }
+  }
+
+  return obj;
+}
+
 // Xử lý lỗi response
 api.interceptors.response.use(
-  (response) => response.data,
+  (response) => {
+    if (response.data?.data) {
+      response.data.data = resolveMediaUrl(response.data.data);
+    }
+    return response.data;
+  },
   (error) => {
     console.error(error);
     if (axios.isAxiosError(error)) {
@@ -53,10 +78,18 @@ export default {
   async get<T>(endpoint: string, option?: AxiosRequestConfig): Promise<T> {
     return await api.get(endpoint, option);
   },
-  async post<T>(endpoint: string, data?: any, option?: AxiosRequestConfig): Promise<T> {
+  async post<T>(
+    endpoint: string,
+    data?: any,
+    option?: AxiosRequestConfig
+  ): Promise<T> {
     return await api.post(endpoint, data, option);
   },
-  async put<T>(endpoint: string, data?: any, option?: AxiosRequestConfig): Promise<T> {
+  async put<T>(
+    endpoint: string,
+    data?: any,
+    option?: AxiosRequestConfig
+  ): Promise<T> {
     return await api.put(endpoint, data, option);
   },
   async delete<T>(endpoint: string, option?: AxiosRequestConfig): Promise<T> {

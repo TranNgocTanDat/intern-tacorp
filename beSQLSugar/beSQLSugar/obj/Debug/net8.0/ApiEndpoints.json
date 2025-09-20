@@ -481,118 +481,40 @@
   },
   {
     "ContainingType": "beSQLSugar.API.HeroSectionController",
-    "Method": "GetHeroSectionWithProducts",
-    "RelativePath": "api/hero-section/{id}/with-products",
+    "Method": "FilterHeroSections",
+    "RelativePath": "api/hero-section/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "beSQLSugar.API.HeroSectionController",
-    "Method": "GetHeroSectionByDateRange",
-    "RelativePath": "api/hero-section/dateRange",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "from",
-        "Type": "System.DateTime",
+        "Name": "Title",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "to",
-        "Type": "System.DateTime",
+        "Name": "Description",
+        "Type": "System.String",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
+      },
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "beSQLSugar.API.HeroSectionController",
-    "Method": "GetHeroSectionByPageHero",
-    "RelativePath": "api/hero-section/pageHero/{pageHero}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "pageHero",
+        "Name": "PageHero",
         "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
+        "IsRequired": false
+      },
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "beSQLSugar.API.HeroSectionController",
-    "Method": "GetPublishedHeroSections",
-    "RelativePath": "api/hero-section/published",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+        "Name": "IsPublished",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "beSQLSugar.API.HeroSectionController",
-    "Method": "SearchHeroSections",
-    "RelativePath": "api/hero-section/search",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+        "Name": "PublishFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
       {
-        "Name": "keyword",
-        "Type": "System.String",
+        "Name": "PublishTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],

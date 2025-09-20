@@ -2,6 +2,7 @@
 using Azure;
 using beSQLSugar.Application.DTO.request;
 using beSQLSugar.Application.DTO.response;
+using beSQLSugar.Application.DTOs.request;
 using beSQLSugar.Application.ServiceInterfaces;
 using beSQLSugar.Domain.Enities;
 using beSQLSugar.Domain.RepositoryInterfaces;
@@ -34,28 +35,29 @@ namespace beSQLSugar.Application.Services
             // Map DTO sang entity
             var entity = _mapper.Map<HeroSection>(request);
 
-            if(request.HeroMediaFile != null && request.HeroMediaFile.Length > 0)
+            if (request.HeroMediaFile != null && request.HeroMediaFile.Length > 0)
             {
-                // Tạo đường dẫn lưu ảnh
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                // Tạo thư mục uploads trong wwwroot
+                var uploadsFolder = Path.Combine(_env.WebRootPath, "uploads");
                 if (!Directory.Exists(uploadsFolder))
                 {
                     Directory.CreateDirectory(uploadsFolder);
                 }
 
-                // Tạo tên file duy nhất
-                var originalFileName = Path.GetFileName(request.HeroMediaFile.FileName);
-                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(originalFileName);
+                // Tạo tên file duy nhất
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(request.HeroMediaFile.FileName);
                 var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                // Lưu file vào đường dẫn
+
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await request.HeroMediaFile.CopyToAsync(fileStream);
                 }
-                // Lưu đường dẫn ảnh vào entity
-                entity.HeroMediaUrl = "/uploads/" + uniqueFileName;
+
+                // Lưu URL (client sẽ gọi qua http://localhost:5271/uploads/...)
+                entity.HeroMediaUrl = $"/uploads/{uniqueFileName}";
                 entity.HeroMediaType = request.HeroMediaFile.ContentType.StartsWith("video") ? "video" : "image";
             }
+
 
             // Thêm entity vào repository
             var addedEntity = await _repository.AddAsync(entity);
@@ -85,15 +87,6 @@ namespace beSQLSugar.Application.Services
             return _mapper.Map<List<HeroSectionResponse>>(entities);
         }
 
-        // Lấy danh sách HeroSection theo khoảng thời gian
-        public async Task<List<HeroSectionResponse>> GetByDateRangeAsync(DateTime from, DateTime to)
-        {
-            // Lấy danh sách entity từ repository
-            var entities = await _repository.GetByDateRangeAsync(from, to);
-            // Map sang danh sách DTO và trả về
-            return _mapper.Map<List<HeroSectionResponse>>(entities);
-        }
-
         // Lấy HeroSection theo id
         public async Task<HeroSectionResponse?> GetByIdAsync(int id)
         {
@@ -102,37 +95,12 @@ namespace beSQLSugar.Application.Services
             return  _mapper.Map<HeroSectionResponse?>(entity);
         }
 
-        // Lấy danh sách HeroSection theo pageHero
-        public async Task<List<HeroSectionResponse>> GetByPageHeroAsync(string pageHero)
+        // Filter HeroSection theo các tiêu chí trong request
+        public async Task<List<HeroSectionResponse>> FilterAsync(HeroSectionFilterRequest request)
         {
-            // Lấy danh sách entity từ repository
-            var entities = await _repository.GetByPageHeroAsync(pageHero);
-            // Map sang danh sách DTO và trả về
-            return  _mapper.Map<List<HeroSectionResponse>>(entities);
-        }
-
-        // Lấy danh sách HeroSection đang được public
-        public async Task<List<HeroSectionResponse>> GetPublishedAsync()
-        {
-            // Lấy danh sách entity từ repository
-            var entities = await _repository.GetPublishedAsync();
-            // Map sang danh sách DTO và trả về
-            return  _mapper.Map<List<HeroSectionResponse>>(entities);
-        }
-
-        // Lấy HeroSection cùng với danh sách HeroProduct liên quan
-        public async Task<HeroSectionResponse?> GetWithProductsAsync(int id)
-        {
-            // Lấy entity từ repository
-            var entity = await _repository.GetWithProductsAsync(id);
-            // Map sang DTO hoặc trả về null nếu không tìm thấy
-            return  _mapper.Map<HeroSectionResponse?>(entity);
-        }
-
-        public async Task<List<HeroSectionResponse>> SearchAsync(string keyword)
-        {
-            // Lấy danh sách entity từ repository
-            var entities = await _repository.SearchAsync(keyword);
+            // Lấy tất cả entity
+            var entities = await _repository.FilterAsync(request);
+            
             // Map sang danh sách DTO và trả về
             return  _mapper.Map<List<HeroSectionResponse>>(entities);
         }
@@ -157,19 +125,29 @@ namespace beSQLSugar.Application.Services
             var heroSection = _mapper.Map<HeroSection>(request);
             heroSection.Id = id;
 
-            if (request.HeroMediaFile != null)
+            if (request.HeroMediaFile != null && request.HeroMediaFile.Length > 0)
             {
-                var fileName = $"{Guid.NewGuid()}_{request.HeroMediaFile.FileName}";
-                var folder = Path.Combine(_env.WebRootPath, "uploads");
-                if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                // Tạo thư mục uploads trong wwwroot
+                var uploadsFolder = Path.Combine(_env.WebRootPath, "uploads");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
 
-                var filePath = Path.Combine(folder, fileName);
-                using var stream = new FileStream(filePath, FileMode.Create);
-                await request.HeroMediaFile.CopyToAsync(stream);
+                // Tạo tên file duy nhất
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(request.HeroMediaFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-                heroSection.HeroMediaUrl = $"/uploads/{fileName}";
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await request.HeroMediaFile.CopyToAsync(fileStream);
+                }
+
+                // Lưu URL (client sẽ gọi qua http://localhost:5271/uploads/...)
+                heroSection.HeroMediaUrl = $"/uploads/{uniqueFileName}";
                 heroSection.HeroMediaType = request.HeroMediaFile.ContentType.StartsWith("video") ? "video" : "image";
             }
+
 
             // Cập nhật entity
             var updated = await _repository.UpdateAsync(heroSection);
@@ -184,5 +162,7 @@ namespace beSQLSugar.Application.Services
 
             return response;
         }
+
+        
     }
 }

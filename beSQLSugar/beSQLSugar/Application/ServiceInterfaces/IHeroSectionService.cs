@@ -1,5 +1,6 @@
 ﻿using beSQLSugar.Application.DTO.request;
 using beSQLSugar.Application.DTO.response;
+using beSQLSugar.Application.DTOs.request;
 
 namespace beSQLSugar.Application.ServiceInterfaces
 {
@@ -13,10 +14,7 @@ namespace beSQLSugar.Application.ServiceInterfaces
         Task<Boolean> DeleteAsync(int id);
 
         // Các phương thức riêng cho HeroSection
-        Task<List<HeroSectionResponse>> GetPublishedAsync();
-        Task<List<HeroSectionResponse>> GetByDateRangeAsync(DateTime from, DateTime to);
-        Task<List<HeroSectionResponse>> GetByPageHeroAsync(string pageHero);
-        Task<HeroSectionResponse?> GetWithProductsAsync(int id);
-        Task<List<HeroSectionResponse>> SearchAsync(string keyword);
+
+        Task<List<HeroSectionResponse>> FilterAsync(HeroSectionFilterRequest request);
     }
 }

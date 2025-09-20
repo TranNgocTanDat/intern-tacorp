@@ -726,14 +726,42 @@
         }
       }
     },
-    "/api/hero-section/dateRange": {
+    "/api/hero-section/filter": {
       "get": {
         "tags": [
           "HeroSection"
         ],
         "parameters": [
           {
-            "name": "from",
+            "name": "Title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageHero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsPublished",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "PublishFrom",
             "in": "query",
             "schema": {
               "type": "string",
@@ -741,7 +769,7 @@
             }
           },
           {
-            "name": "to",
+            "name": "PublishTo",
             "in": "query",
             "schema": {
               "type": "string",
@@ -766,152 +794,6 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/hero-section/pageHero/{pageHero}": {
-      "get": {
-        "tags": [
-          "HeroSection"
-        ],
-        "parameters": [
-          {
-            "name": "pageHero",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/hero-section/published": {
-      "get": {
-        "tags": [
-          "HeroSection"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/hero-section/search": {
-      "get": {
-        "tags": [
-          "HeroSection"
-        ],
-        "parameters": [
-          {
-            "name": "keyword",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseListAPIResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/hero-section/{id}/with-products": {
-      "get": {
-        "tags": [
-          "HeroSection"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HeroSectionResponseAPIResponse"
                 }
               }
             }
