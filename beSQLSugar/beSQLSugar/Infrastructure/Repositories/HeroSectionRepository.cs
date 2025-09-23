@@ -17,31 +17,41 @@ namespace beSQLSugar.Infrastructure.Repositories
         public async Task<List<HeroSection>> FilterAsync(HeroSectionFilterRequest request)
         {
             var query = _context.Db.Queryable<HeroSection>();
+
             if (!string.IsNullOrEmpty(request.Title))
             {
-                query = query.Where(h => h.Title == request.Title);
+                query = query.Where(h => h.Title != null && h.Title.Contains(request.Title));
             }
+
+            if (!string.IsNullOrEmpty(request.Description))
+            {
+                query = query.Where(h => h.Description != null && h.Description.Contains(request.Description));
+            }
+
+            if (!string.IsNullOrEmpty(request.PageHero))
+            {
+                query = query.Where(h => h.PageHero != null && h.PageHero.Contains(request.PageHero));
+            }
+
             if (request.IsPublished.HasValue)
             {
                 query = query.Where(h => h.IsPublished == request.IsPublished.Value);
             }
-            if (!string.IsNullOrEmpty(request.Description))
-            {
-                query = query.Where(h => h.Description == request.Description);
-            }
-            if (!string.IsNullOrEmpty(request.PageHero))
-            {
-                query = query.Where(h => h.PageHero == request.PageHero);
-            }
+
             if (request.PublishFrom.HasValue)
             {
-                query = query.Where(h => h.PublishFrom >= request.PublishFrom);
+                // record có ngày bắt đầu <= PublishFrom
+                query = query.Where(h => h.PublishFrom != null && h.PublishFrom >= request.PublishFrom.Value);
             }
+
             if (request.PublishTo.HasValue)
             {
-                query = query.Where(h => h.PublishTo <= request.PublishTo);
+                // record có ngày kết thúc >= PublishTo
+                query = query.Where(h => h.PublishTo != null && h.PublishTo <= request.PublishTo.Value);
             }
+
             return await query.ToListAsync();
         }
+
     }
 }

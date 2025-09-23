@@ -6,11 +6,11 @@ namespace beSQLSugar.Domain.Enities
     {
         [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
-        [SugarColumn(Length = 150, IsNullable = false)]
-        public string Name { get; set; } = string.Empty;
+        [SugarColumn(Length = 150)]
+        public string? Name { get; set; } 
 
-        [SugarColumn(Length = 150, IsNullable = false)]
-        public string Slug { get; set; } = string.Empty;
+        [SugarColumn(Length = 150)]
+        public string? Slug { get; set; } 
 
         [SugarColumn(IsNullable = true)]
         public int? ParentId { get; set; }
@@ -22,7 +22,7 @@ namespace beSQLSugar.Domain.Enities
         public int OrderIndex { get; set; } = 0;
 
         [SugarColumn(DefaultValue = "1")]
-        public bool IsActive { get; set; } = true;
+        public bool IsActive { get; set; } 
 
         [SugarColumn(IsNullable = true)]
         public int? CreateUid { get; set; }

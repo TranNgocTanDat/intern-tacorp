@@ -69,6 +69,9 @@ builder.Services.AddScoped<IAdminUserService, AdminUserService>();
 builder.Services.AddScoped<IHeroSectionRepository, HeroSectionRepository>();
 builder.Services.AddScoped<IHeroSectionService, HeroSectionService>();
 
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJWTService, JWTService>();
 
