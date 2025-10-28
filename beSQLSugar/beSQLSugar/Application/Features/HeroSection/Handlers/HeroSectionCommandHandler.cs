@@ -1,6 +1,6 @@
-﻿using beSQLSugar.Application.DTO.response;
+﻿using beSQLSugar.Application.Dto.response.HeroSection;
 using beSQLSugar.Application.Features.HeroSection.Commands;
-using beSQLSugar.Application.ServiceInterfaces;
+using beSQLSugar.Application.Services.HeroSectionServices;
 using MediatR;
 
 namespace beSQLSugar.Application.Features.HeroSection.Handlers
@@ -19,7 +19,7 @@ namespace beSQLSugar.Application.Features.HeroSection.Handlers
 
         public async Task<HeroSectionResponse> Handle(CreateHeroSectionCommand request, CancellationToken cancellationToken)
         {
-            var result = await _heroSectionService.AddAsync(request.Request);
+            var result = await _heroSectionService.AddAsync(request.Request, request.User);
             if (result is null)
                 throw new InvalidOperationException("Failed to create HeroSection.");
             return result;
@@ -27,7 +27,10 @@ namespace beSQLSugar.Application.Features.HeroSection.Handlers
 
         public async Task<HeroSectionResponse> Handle(UpdateHeroSectionCommand request, CancellationToken cancellationToken)
         {
-            return await _heroSectionService.UpdateAsync(request.Id, request.Request);
+            var result = await _heroSectionService.UpdateAsync(request.Id, request.Request!, request.User);
+            if (result is null)
+                throw new InvalidOperationException("Failed to update HeroSection.");
+            return result;
         }
 
         public async Task<bool> Handle(DeleteHeroSectionCommand request, CancellationToken cancellationToken)

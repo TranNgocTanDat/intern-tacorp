@@ -17,14 +17,19 @@ import "vxe-pc-ui/lib/style.css";
 import { createI18n } from "vue-i18n";
 import vi from "./i18n/vxe-vi";
 
+import { pinia } from "./store";
+
 const i18n = createI18n({
+  legacy: false,
+  globalInjection: true,
   locale: "vi",
-  messages: {
-    vi,
-  },
+  fallbackLocale: "en",
+  messages: { vi },
 });
 
 const app = createApp(App);
+
+app.use(pinia);
 
 // Truyền hàm i18n cho VXETable
 VXETable.setConfig({

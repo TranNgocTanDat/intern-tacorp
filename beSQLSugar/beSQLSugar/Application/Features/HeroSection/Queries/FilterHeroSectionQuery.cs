@@ -1,5 +1,5 @@
-﻿using beSQLSugar.Application.DTO.response;
-using beSQLSugar.Application.DTOs.request;
+﻿using beSQLSugar.Application.Dto.request.HeroSection;
+using beSQLSugar.Application.Dto.response.HeroSection;
 using MediatR;
 
 namespace beSQLSugar.Application.Features.HeroSection.Queries

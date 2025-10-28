@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using beSQLSugar.Application.DTO.request;
-using beSQLSugar.Application.DTO.response;
-using beSQLSugar.Domain.Enities;
+using beSQLSugar.Application.Dto.request.Admin;
+using beSQLSugar.Application.Dto.response.Admin;
+using beSQLSugar.Infrastructure.Database.Enities;
 
 namespace beSQLSugar.Application.Mapping
 {

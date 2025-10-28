@@ -1,5 +1,5 @@
-﻿using beSQLSugar.Application.DTOs.request;
-using beSQLSugar.Application.DTOs.response;
+﻿using beSQLSugar.Application.Dto.request.Auth;
+using beSQLSugar.Application.Dto.response.Auth;
 using MediatR;
 
 namespace beSQLSugar.Application.Features.Login.Commands

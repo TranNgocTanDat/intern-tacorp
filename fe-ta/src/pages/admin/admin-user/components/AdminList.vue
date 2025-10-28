@@ -1,81 +1,62 @@
 <template>
-  <div class="demo-page-wrapper" style="z-index: 0;">
-    <vxe-grid v-bind="gridOptions" v-on="gridEvents">
+  <div class="demo-page-wrapper" style="z-index: 0">
+    <vxe-grid ref="gridRef" v-bind="gridOptions" v-on="gridEvents">
       <template #actions="{ row }">
-        <button
-          class="px-3 py-1 bg-black text-white rounded hover:bg-blue-600 mr-2"
-          @click="handleEdit(row)"
-        >
-          Sửa
-        </button>
-        <button
-          class="px-3 py-1 bg-black text-white rounded hover:bg-red-600"
-          @click="handleDelete(row.id)"
-        >
-          Xoá
-        </button>
+        <el-button-group class="ml-4">
+          <el-button type="primary" :icon="Edit" @click="handleEdit(row)" />
+          <el-button type="primary" :icon="Share" />
+          <el-button
+            type="primary"
+            :icon="Delete"
+            @click="handleDelete(row.id)"
+          />
+        </el-button-group>
       </template>
     </vxe-grid>
   </div>
 </template>
 
 <script setup lang="ts">
-// import { getAdminUsers, searchAdminUsers } from "@/services/adminApi";
-import type { AdminUserResponse, AdminUserSearchRequest } from "@/models/AdminUser";
-import adminApi from "@/services/adminApi";
-import { reactive, ref } from "vue";
-import { watch } from 'vue';
+import type {
+  AdminUserResponse,
+  AdminUserSearchRequest,
+} from "@/models/AdminUser";
+import { ref, reactive, onMounted, watch } from "vue";
 import type {
   VxeGridProps,
   VxeGridPropTypes,
   VxeGridListeners,
 } from "vxe-table";
+import { Delete, Edit, Share } from "@element-plus/icons-vue";
+import { useAdminStore } from "@/store/adminStore";
 
-const props = defineProps<{
-  items?: AdminUserResponse[];
-}>();
-
+const props = defineProps<{ items?: AdminUserResponse[] }>();
 const emit = defineEmits<{
   (e: "edit-admin-user", user: AdminUserResponse): void;
   (e: "delete-admin-user", id: number): void;
 }>();
 
-const handleEdit = (user: AdminUserResponse) => {
-  emit("edit-admin-user", user);
-};
+const handleEdit = (user: AdminUserResponse) => emit("edit-admin-user", user);
+const handleDelete = (id: number) => emit("delete-admin-user", id);
 
-const handleDelete = (id: number) => {
-  emit("delete-admin-user", id);
-};
+const gridRef = ref<any>(null);
+defineExpose({ gridRef });
 
-const loading = ref(false);
+const adminStore = useAdminStore();
 
-const handleGetUsers = async () => {
-  loading.value = true;
-  try {
-    const response = await adminApi.getAllAdmin();
-    return response;
-  } catch (error) {
-    console.error("Lỗi khi lấy danh sách người dùng:", error);
-    return [];
-  } finally {
-    loading.value = false;
+// Load dữ liệu khi mount
+onMounted(() => {
+  if (adminStore.admins.length === 0) {
+    adminStore.loadAdmins();
   }
-};
+});
 
+// Hàm search dùng store action
 const handleSearchUsers = async (request: AdminUserSearchRequest) => {
-  loading.value = true;
-  try {
-    const response = await adminApi.searchAdminUsers(request);
-    return response;
-  } catch (error) {
-    console.error("Lỗi khi tìm kiếm người dùng:", error);
-    return [];
-  } finally {
-    loading.value = false;
-  }
+  return await adminStore.searchAdmins(request);
 };
 
+// Cấu hình grid
 const gridOptions = reactive<
   VxeGridProps<AdminUserResponse> & {
     pagerConfig: VxeGridPropTypes.PagerConfig;
@@ -87,11 +68,13 @@ const gridOptions = reactive<
   height: "100%",
   formConfig: {
     titleWidth: 80,
-    titleAlign: "right",
+    titleAlign: "center",
     data: {
       username: "",
       fullName: "",
       email: "",
+      phone: "",
+      isActive: null,
     },
     items: [
       {
@@ -116,8 +99,33 @@ const gridOptions = reactive<
         itemRender: { name: "VxeInput", props: { placeholder: "Nhập email" } },
       },
       {
+        field: "phone",
+        title: "Số điện thoại",
         span: 6,
-        collapseNode: true,
+        folding: true,
+        itemRender: {
+          name: "VxeInput",
+          props: { placeholder: "Nhập số điện thoại" },
+        },
+      },
+      {
+        field: "isActive",
+        title: "Trạng thái",
+        span: 6,
+        folding: true,
+        itemRender: {
+          name: "VxeSelect",
+          props: { placeholder: "Chọn trạng thái" },
+          options: [
+            { value: null, label: "Tất cả" },
+            { value: true, label: "Hoạt động" },
+            { value: false, label: "Ngưng" },
+          ],
+        },
+      },
+      {
+        span: 6,
+        // collapseNode: true,
         itemRender: {
           name: "VxeButtonGroup",
           options: [
@@ -149,16 +157,10 @@ const gridOptions = reactive<
       slots: { default: "actions" },
     },
   ],
-  pagerConfig: {
-    pageSize: 10,
-    pageSizes: [10, 20, 50, 100],
-  },
+  pagerConfig: { pageSize: 10, pageSizes: [10, 20, 50, 100] },
   proxyConfig: {
     form: true,
-    response: {
-      result: "data",
-      total: "total",
-    },
+    response: { result: "data", total: "total" },
     ajax: {
       async query({ form }) {
         const cleanForm = Object.fromEntries(
@@ -166,31 +168,29 @@ const gridOptions = reactive<
             ([_, v]) => v !== null && v !== "" && v !== undefined
           )
         );
-
         const isSearching = Object.keys(cleanForm).length > 0;
+        let data: AdminUserResponse[] = [];
 
-        const data = isSearching
-          ? await handleSearchUsers(cleanForm)
-          : await handleGetUsers();
+        if (isSearching) {
+          data = await handleSearchUsers(cleanForm); // Gọi search nếu có điều kiện
+        } else {
+          // Form rỗng → gọi lại API luôn, không dùng store
+          await adminStore.loadAdmins(); // ← luôn gọi API
+          data = adminStore.admins;
+        }
 
-        return {
-          data,
-          total: data.length,
-        };
+        return { data, total: data.length };
       },
     },
   },
 });
 
-// If parent passes `items`, use it as grid data and disable proxy
+// Nếu parent truyền items thì dùng trực tiếp
 watch(
   () => props.items,
   (val) => {
     if (val && Array.isArray(val)) {
-      // assign direct data and disable proxy so grid shows parent data
-      // @ts-ignore
-      gridOptions.data = val;
-      // @ts-ignore
+      gridOptions.data = val as AdminUserResponse[];
       gridOptions.proxyConfig = undefined;
     }
   },
@@ -203,3 +203,5 @@ const gridEvents: VxeGridListeners = {
   },
 };
 </script>
+
+<style scoped></style>

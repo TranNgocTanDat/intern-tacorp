@@ -1,6 +1,6 @@
-﻿using beSQLSugar.Application.DTO.response;
+﻿using beSQLSugar.Application.Dto.response.Admin;
 using beSQLSugar.Application.Features.AdminUsers.Queries;
-using beSQLSugar.Application.ServiceInterfaces;
+using beSQLSugar.Application.Services.Admin;
 using MediatR;
 
 namespace beSQLSugar.Application.Features.AdminUsers.Handlers

@@ -1,70 +1,95 @@
 <script lang="ts" setup>
-import { computed } from "vue";
-import {
-  heroSections,
-  heroSectionProducts,
-} from "@/pages/user/HomePage/components/heroData";
+import { ref, computed, watch } from "vue";
+import { useHeroSectionStore } from "@/store/heroSectionStore";
+import type { HeroSectionResponse } from "@/models/HeroSection";
 
-const now = new Date();
+// Props
+interface PageHeroProps {
+  pageHero: string;
+}
+const props = defineProps<PageHeroProps>();
 
-// Lấy HeroSection đang publish
-const heroSection = computed(() => {
-  return heroSections.find(
-    (hs) =>
-      hs.isPublished &&
-      new Date(hs.publishFrom) <= now &&
-      (!hs.publishTo || new Date(hs.publishTo) >= now)
-  );
-});
+// Store
+const heroSectionStore = useHeroSectionStore();
 
-// Lấy sản phẩm liên kết
-const products = computed(() => {
-  if (!heroSection.value) return [];
-  return heroSectionProducts
-    .filter((hp) => hp.HeroSectionId === heroSection.value!.ID)
-    .sort((a, b) => a.orderIndex - b.orderIndex);
-});
+// Local state
+const heroSection = ref<HeroSectionResponse | null>(null);
+const heroProducts = computed(() => heroSection.value?.heroProducts ?? []);
+
+// Load hero sections from store
+watch(
+  () => heroSectionStore.sections,
+  () => {
+    updateHeroSection();
+  },
+  { immediate: true }
+);
+
+async function loadData() {
+  await heroSectionStore.loadByPageHero(props.pageHero);
+  updateHeroSection();
+}
+
+// Call loadData immediately
+loadData();
+
+// Function chọn section hợp lệ
+function updateHeroSection() {
+  const now = new Date().getTime();
+  heroSection.value =
+    heroSectionStore.sections.find((s) => {
+      const start = new Date(s.publishFrom ?? "").getTime();
+      const end = new Date(s.publishTo ?? "").getTime();
+      return now >= start && now <= end;
+    }) ?? null;
+}
 </script>
 
 <template>
   <div class="hero-wrapper">
-    <!-- Background (Image or Video) -->
+    <!-- Hero Background -->
     <div class="hero-background">
       <img
         v-if="heroSection?.heroMediaType === 'image'"
-        :src="heroSection.HeroMediaUrl"
+        :src="heroSection.heroMediaUrl"
         alt="Hero Background"
         class="hero-media"
       />
       <video
         v-else-if="heroSection?.heroMediaType === 'video'"
-        :src="heroSection.HeroMediaUrl"
-        autoplay
-        muted
-        loop
-        playsinline
+        :src="heroSection.heroMediaUrl"
+        autoplay muted loop playsinline
         class="hero-media"
       ></video>
 
-      <!-- Text overlay -->
+      <!-- Text Overlay -->
       <div class="hero-text">
         <h2>{{ heroSection?.title }}</h2>
-        <p>{{ heroSection?.ShortDescription }}</p>
+        <p>{{ heroSection?.description }}</p>
       </div>
     </div>
 
     <!-- Product Carousel -->
     <el-carousel
-      :interval="0"
-      trigger="click"
-      arrow="never"
-      type="card"
       class="products-carousel"
+      arrow="never"
+      trigger="click"
+      type="card"
+      :interval="3000"
+      :autoplay="true"
     >
-      <el-carousel-item width="300px" v-for="p in products" :key="p.ID">
+      <el-carousel-item
+        v-for="p in heroProducts.slice(0, 4)"
+        :key="p.productId"
+        width="300px"
+      >
         <div class="product-card">
-          <img :src="`https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/article/Apple-iPhone-17-hero-250909_inline.jpg.large_2x.jpg`" alt="Product" class="image-product" />
-          <p>Iphone {{ p.productId }}</p>
+          <img
+            :src="p.product?.mediaList?.find((m) => m.isPrimary)?.mediaFileUrl"
+            alt="Product"
+            class="image-product"
+          />
+          <p>{{ p.product?.productName }}</p>
         </div>
       </el-carousel-item>
     </el-carousel>
@@ -75,11 +100,10 @@ const products = computed(() => {
 .hero-wrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
 }
 
-/* Hero background: full-screen image/video */
 .hero-background {
   position: absolute;
   top: 0;
@@ -87,33 +111,32 @@ const products = computed(() => {
   width: 100%;
   height: 100%;
   z-index: 1;
+  
 }
 
 .hero-media {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-size: contain;
 }
 
-/* Text overlay */
 .hero-text {
   position: absolute;
   bottom: 30px;
   left: 50px;
   z-index: 2;
   color: white;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
-/* Carousel products overlay */
 .products-carousel {
   position: absolute;
   top: 30%;
   right: 10%;
-  z-index: 3;
   width: 500px;
   padding: 0 20px;
-  background: rgba(0, 0, 0, 0.2); /* optional */
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -122,26 +145,31 @@ const products = computed(() => {
   justify-content: center;
 }
 
-/* Product Card */
 .product-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
-  transition: transform 0.2s;
   padding: 10px;
   border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .product-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) rotateZ(-1deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.product-card img {
+.product-card p {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.image-product {
   width: 200px;
   height: 200px;
-  background-size: contain;
+  object-fit: contain;
   border-radius: 4px;
 }
 </style>

@@ -22,6 +22,21 @@ function resolveMediaUrl(obj: any): any {
     if (obj.heroMediaUrl && !obj.heroMediaUrl.startsWith("http")) {
       obj.heroMediaUrl = BASE_URL + obj.heroMediaUrl;
     }
+    if (obj.mediaFileUrl && !obj.mediaFileUrl.startsWith("http")) {
+      obj.mediaFileUrl = BASE_URL + obj.mediaFileUrl;
+    }
+    if (obj.logoUrl && !obj.logoUrl.startsWith("http")) {
+      obj.logoUrl = BASE_URL + obj.logoUrl;
+    }
+    if (obj.imgDefaultUrl && !obj.imgDefaultUrl.startsWith("http")) {
+      obj.imgDefaultUrl = BASE_URL + obj.imgDefaultUrl;
+    }
+    if (obj.imgHoverUrl && !obj.imgHoverUrl.startsWith("http")) {
+      obj.imgHoverUrl = BASE_URL + obj.imgHoverUrl;
+    }
+    if (obj.filePathMap && !obj.filePathMap.startsWith("http")) {
+      obj.filePathMap = BASE_URL + obj.filePathMap;
+    }
     for (const key in obj) {
       obj[key] = resolveMediaUrl(obj[key]);
     }

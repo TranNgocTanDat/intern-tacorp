@@ -1,14 +1,16 @@
-﻿using beSQLSugar.Application.DTO.response;
+﻿using beSQLSugar.Application.Dto.response.HeroSection;
 using beSQLSugar.Application.Features.HeroSection.Queries;
-using beSQLSugar.Application.ServiceInterfaces;
+using beSQLSugar.Application.Services.HeroSectionServices;
 using MediatR;
 
 namespace beSQLSugar.Application.Features.HeroSection.Handlers
 {
     public class HeroSectionQueryHandler :
-        IRequestHandler<GetHeroSectionByIdQuery, HeroSectionResponse?>,
-        IRequestHandler<GetAllHeroSectionQuery, List<HeroSectionResponse>>,
-        IRequestHandler<FilterHeroSectionQuery, List<HeroSectionResponse>>
+           
+            IRequestHandler<FilterHeroSectionQuery, List<HeroSectionResponse>>,
+            IRequestHandler<GetAllWithDetailsQuery, List<HeroSectionResponse>>,
+            IRequestHandler<GetHeroSectionWithDetailsQuery, HeroSectionResponse?>,
+            IRequestHandler<GetHeroSectionWithPageHeroQuery, List<HeroSectionResponse>>
 
     {
         private readonly IHeroSectionService _heroSectionService;
@@ -17,19 +19,24 @@ namespace beSQLSugar.Application.Features.HeroSection.Handlers
             _heroSectionService = heroSectionService;
         }
 
-        public async Task<HeroSectionResponse?> Handle(GetHeroSectionByIdQuery request, CancellationToken cancellationToken)
-        {
-            return await _heroSectionService.GetByIdAsync(request.Id);
-        }
-
-        public async Task<List<HeroSectionResponse>> Handle(GetAllHeroSectionQuery request, CancellationToken cancellationToken)
-        {
-            return await _heroSectionService.GetAllAsync();
-        }
-
         public async Task<List<HeroSectionResponse>> Handle(FilterHeroSectionQuery request, CancellationToken cancellationToken)
         {
             return await _heroSectionService.FilterAsync(request.FilterRequest!);
+        }
+
+        public async Task<HeroSectionResponse?> Handle(GetHeroSectionWithDetailsQuery request, CancellationToken cancellationToken)
+        {
+            return await _heroSectionService.GetHeroSectionWithDetailsAsync(request.Id);
+        }
+
+        public async Task<List<HeroSectionResponse>> Handle(GetAllWithDetailsQuery request, CancellationToken cancellationToken)
+        {
+            return await _heroSectionService.GetAllWithDetailsAsync();
+        }
+
+        public async Task<List<HeroSectionResponse>> Handle(GetHeroSectionWithPageHeroQuery request, CancellationToken cancellationToken)
+        {
+            return await _heroSectionService.GetHeroSectionsWithPageHeroAsync(request.PageHero);
         }
     }
 }

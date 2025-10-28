@@ -1,36 +1,49 @@
 <template>
-  <div class="demo-page-wrapper" style="z-index: 0;">
-    <vxe-grid v-bind="gridOptions" v-on="gridEvents">
+  <div class="demo-page-wrapper" style="z-index: 0">
+    <vxe-grid ref="gridRef" v-bind="gridOptions" v-on="gridEvents">
       <template #actions="{ row }">
-        <button
-          class="px-3 py-1 bg-black text-white rounded hover:bg-blue-600 mr-2"
-          @click="handleEdit(row)"
-        >
-          Sửa
-        </button>
-        <button
-          class="px-3 py-1 bg-black text-white rounded hover:bg-red-600"
-          @click="handleDelete(row.id)"
-        >
-          Xoá
-        </button>
+        <el-button-group class="ml-4">
+          <el-button type="primary" :icon="Edit" @click="handleEdit(row)" />
+          <el-button type="primary" :icon="Share" />
+          <el-button
+            type="primary"
+            :icon="Delete"
+            @click="handleDelete(row.id)"
+          />
+        </el-button-group>
+      </template>
+      <template #media="{ row }">
+        <img
+          v-if="row.heroMediaUrl"
+          :src="row.heroMediaUrl"
+          alt="Hero Media"
+          style="max-width: 100px; max-height: 100px"
+        />
+        <span v-else>Chưa có ảnh</span>
       </template>
     </vxe-grid>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { HeroSectionFilterRequest, HeroSectionResponse } from "@/models/HeroSection";
-import heroSectionApi from "@/services/heroSectionApi";
-import { reactive, ref, watch } from "vue";
+import type {
+  HeroSectionFilterRequest,
+  HeroSectionResponse,
+} from "@/models/HeroSection";
+import { onMounted, reactive, ref, watch } from "vue";
 import type {
   VxeGridProps,
   VxeGridPropTypes,
   VxeGridListeners,
 } from "vxe-table";
 
+import { Delete, Edit, Share } from "@element-plus/icons-vue";
+import { useHeroSectionStore } from "@/store/heroSectionStore";
+
+// === Props + Emits ===
 const props = defineProps<{
-  items?: HeroSectionResponse[];
+  heroSections?: HeroSectionResponse[];
+  loading?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -46,33 +59,30 @@ const handleDelete = (id: number) => {
   emit("delete-hero-section", id);
 };
 
-const loading = ref(false);
+// === Store ===
+const heroSectionStore = useHeroSectionStore();
+const gridRef = ref<any>(null);
+defineExpose({ gridRef });
 
-const handleGetHeroSections = async () => {
-  loading.value = true;
-  try {
-    const response = await heroSectionApi.getAllHeroSections();
-    return response;
-  } catch (error) {
-    console.error("Lỗi khi lấy danh sách hero section:", error);
-    return [];
-  } finally {
-    loading.value = false;
-  }
-};
 
-const handleSearchHeroSections = async (request: HeroSectionFilterRequest) => {
-  loading.value = true;
-  try {
-    const response = await heroSectionApi.filterHeroSections(request);
-    return response;
-  } catch (error) {
-    console.error("Lỗi khi tìm kiếm hero section:", error);
-    return [];
-  } finally {
-    loading.value = false;
+// Load dữ liệu khi mount
+onMounted(() => {
+  if (heroSectionStore.sections.length === 0) {
+    heroSectionStore.loadAll();
   }
-};
+});
+
+// Tạo reactive object từ interface
+const filterData = reactive<HeroSectionFilterRequest>({
+  title: "",
+  description: "",
+  pageHero: "",
+  isPublished: undefined,
+  publishFrom: "",
+  publishTo: "",
+  createdName: "",
+  updatedName: "",
+});
 
 const gridOptions = reactive<
   VxeGridProps<HeroSectionResponse> & {
@@ -84,58 +94,13 @@ const gridOptions = reactive<
   showOverflow: "title",
   height: "100%",
   formConfig: {
-    titleWidth: 100,
-    titleAlign: "right",
-    data: {
-      title: "",
-      subtitle: "",
-      description: "",
-      buttonText: "",
-      buttonLink: "",
-      isPublished: null,
-      publishFrom: null,
-      publishTo: null,
-    },
+    titleWidth: 80,
+    titleAlign: "center",
+    data: filterData,
     items: [
-      {
-        field: "title",
-        title: "Tiêu đề",
-        span: 6,
-        itemRender: {
-          name: "VxeInput",
-          props: { placeholder: "Nhập tiêu đề" },
-        },
-      },
-      {
-        field: "subtitle",
-        title: "Phụ đề",
-        span: 6,
-        itemRender: { name: "VxeInput", props: { placeholder: "Nhập phụ đề" } },
-      },
-      {
-        field: "description",
-        title: "Mô tả",
-        span: 12,
-        itemRender: {
-          name: "VxeInput",
-          props: { placeholder: "Nhập mô tả", type: "textarea", rows: 2 },
-        },
-      },
-      {
-        field: "buttonText",
-        title: "Nút bấm",
-        span: 6,
-        itemRender: { name: "VxeInput", props: { placeholder: "Nhập text nút" } },
-      },
-      {
-        field: "buttonLink",
-        title: "Link nút",
-        span: 6,
-        itemRender: {
-          name: "VxeInput",
-          props: { placeholder: "Nhập link nút" },
-        },
-      },
+      { field: "title", title: "Tiêu đề", span: 6, itemRender: { name: "VxeInput", props: { placeholder: "Nhập tiêu đề" } } },
+      { field: "description", title: "Mô tả", span: 6, itemRender: { name: "VxeInput", props: { placeholder: "Nhập mô tả", type: "textarea", rows: 2 } } },
+      { field: "pageHero", title: "Page Hero", span: 6, itemRender: { name: "VxeInput", props: { placeholder: "Nhập Page Hero" } } },
       {
         field: "isPublished",
         title: "Trạng thái",
@@ -148,20 +113,13 @@ const gridOptions = reactive<
           ],
         },
       },
-      {
-        field: "publishFrom",
-        title: "Ngày bắt đầu",
-        span: 6,
-        itemRender: { name: "VxeInput", props: { type: "date" } },
-      },
-      {
-        field: "publishTo",
-        title: "Ngày kết thúc",
-        span: 6,
-        itemRender: { name: "VxeInput", props: { type: "date" } },
-      },
+      { field: "publishFrom", title: "Ngày bắt đầu", span: 6, itemRender: { name: "VxeInput", props: { type: "date" } } },
+      { field: "publishTo", title: "Ngày kết thúc", span: 6, itemRender: { name: "VxeInput", props: { type: "date" } } },
+      { field: "createdName", title: "Người tạo", span: 6, itemRender: { name: "VxeInput", props: { placeholder: "Người tạo" } } },
+      { field: "updatedName", title: "Người cập nhật", span: 6, itemRender: { name: "VxeInput", props: { placeholder: "Người cập nhật" } } },
       {
         span: 6,
+        align: "right",
         collapseNode: true,
         itemRender: {
           name: "VxeButtonGroup",
@@ -174,27 +132,21 @@ const gridOptions = reactive<
     ],
   },
   columns: [
-    { type: "seq", width: 60, title: "#" },
-    { field: "title", title: "Tiêu đề", minWidth: 150 },
-    { field: "subtitle", title: "Phụ đề", minWidth: 150 },
-    { field: "description", title: "Mô tả", minWidth: 200 },
-    { field: "buttonText", title: "Nút bấm", minWidth: 120 },
-    { field: "buttonLink", title: "Link nút", minWidth: 150 },
+    { type: "seq", width: 60, title: "#", align: "center" },
+    { field: "title", title: "Tiêu đề", minWidth: 200, sortable: true },
+    { field: "description", title: "Mô tả", minWidth: 200, sortable: true },
+    { field: "pageHero", title: "Trang hiển thị", minWidth: 140, sortable: true },
     {
       field: "isPublished",
       title: "Trạng thái",
-      minWidth: 100,
-      formatter: ({ cellValue }) => (cellValue ? "Hoạt động" : "Ngưng"),
-    },
-    { field: "publishFrom", title: "Bắt đầu", minWidth: 130 },
-    { field: "publishTo", title: "Kết thúc", minWidth: 130 },
-    {
-      field: "heroMediaUrl",
-      title: "Media",
       minWidth: 150,
-      formatter: ({ cellValue }) =>
-        cellValue ? `<img src="${cellValue}" width="80"/>` : "Không có",
+      formatter: ({ cellValue }) => (cellValue ? "Hoạt động" : "Ngưng"),
+      sortable: true,
     },
+    { field: "publishFrom", title: "Bắt đầu", minWidth: 180, sortable: true },
+    { field: "publishTo", title: "Kết thúc", minWidth: 180, sortable: true },
+    { field: "createdName", title: "Người tạo", minWidth: 180, sortable: true },
+    { field: "updatedName", title: "Người cập nhật", minWidth: 180, sortable: true },
     {
       field: "actions",
       title: "Hành động",
@@ -216,17 +168,15 @@ const gridOptions = reactive<
     },
     ajax: {
       async query({ form }) {
+        // Lọc bỏ giá trị rỗng
         const cleanForm = Object.fromEntries(
-          Object.entries(form).filter(
-            ([_, v]) => v !== null && v !== "" && v !== undefined
-          )
+          Object.entries(form).filter(([_, v]) => v !== null && v !== "" && v !== undefined)
         );
 
         const isSearching = Object.keys(cleanForm).length > 0;
-
         const data = isSearching
-          ? await handleSearchHeroSections(cleanForm)
-          : await handleGetHeroSections();
+          ? await heroSectionStore.filter(cleanForm)
+          : (await heroSectionStore.loadAll(), heroSectionStore.sections);
 
         return {
           data,
@@ -237,8 +187,9 @@ const gridOptions = reactive<
   },
 });
 
+// Nếu có prop heroSections thì ưu tiên hiển thị
 watch(
-  () => props.items,
+  () => props.heroSections,
   (val) => {
     if (val && Array.isArray(val)) {
       // @ts-ignore
@@ -252,7 +203,7 @@ watch(
 
 const gridEvents: VxeGridListeners = {
   proxyQuery() {
-    console.log("proxy query chạy");
+    console.log("proxy query chạy qua store");
   },
 };
 </script>

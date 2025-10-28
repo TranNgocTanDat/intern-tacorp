@@ -1,6 +1,7 @@
-﻿using beSQLSugar.Application.DTO.request;
-using beSQLSugar.Application.DTO.response;
+﻿using beSQLSugar.Application.Dto.request.Category;
+using beSQLSugar.Application.Dto.response.Category;
 using MediatR;
+using System.Security.Claims;
 
 namespace beSQLSugar.Application.Features.Category.Commands
 {
@@ -8,10 +9,12 @@ namespace beSQLSugar.Application.Features.Category.Commands
     {
         public int Id { get; set; }
         public CategoryRequest? Request { get; set; }
-        public UpdateCategoryCommand(int id, CategoryRequest? request)
+        public ClaimsPrincipal User { get; set; }
+        public UpdateCategoryCommand(int id, CategoryRequest? request, ClaimsPrincipal user)
         {
             Id = id;
             Request = request;
+            User = user;
         }
     }
 }

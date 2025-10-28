@@ -1,28 +1,38 @@
 export interface ProductSpecRequest {
-  productId: number;
   specKey: string;
   specValue?: string;
   orderIndex?: number;
-  createUid?: number;
-  writeIUid?: number;
-  updateTime?: string; // ISO string (e.g., "2025-09-16T10:00:00Z")
   note?: string;
-  option1?: string;
-  option2?: string;
-  option3?: string;
-  option4?: string;
-  option5?: string;
+}
+
+export interface ProductSpecFilterRequest {
+  productId?: number;
+  productName?: string;
+
+  specKey?: string;
+  specValue?: string;
+  orderIndex?: number;
+
+  createdName?: string;
+  updatedName?: string;
+
+  fromUpdateTime?: string; // ISO string
+  toUpdateTime?: string; // ISO string
+  note?: string;
 }
 
 export interface ProductSpecResponse {
   id: number;
   productId: number;
+  productName?: string;
   specKey: string;
   specValue?: string;
   orderIndex: number;
   createUid?: number;
   writeIUid?: number;
   updateTime?: string;
+  createdName?: string;
+  updatedName?: string;
   note?: string;
   option1?: string;
   option2?: string;

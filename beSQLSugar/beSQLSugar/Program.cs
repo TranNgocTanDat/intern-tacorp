@@ -1,14 +1,38 @@
 ﻿using AutoMapper;
-using beSQLSugar.Application.Features.AdminUsers.Commands;
-using beSQLSugar.Application.ServiceInterfaces;
 using beSQLSugar.Application.Services;
-using beSQLSugar.Domain.Interfaces;
-using beSQLSugar.Domain.RepositoryInterfaces;
+using beSQLSugar.Application.Services.Admin;
+using beSQLSugar.Application.Services.AnalyzerImageServices;
+using beSQLSugar.Application.Services.Auth;
+using beSQLSugar.Application.Services.CategoryServices;
+using beSQLSugar.Application.Services.ContactServices;
+using beSQLSugar.Application.Services.Helper;
+using beSQLSugar.Application.Services.HeroSectionProductServices;
+using beSQLSugar.Application.Services.HeroSectionServices;
+using beSQLSugar.Application.Services.JWT;
+using beSQLSugar.Application.Services.Partners;
+using beSQLSugar.Application.Services.ProductColorServices;
+using beSQLSugar.Application.Services.ProductMediaServices;
+using beSQLSugar.Application.Services.ProductServices;
+using beSQLSugar.Application.Services.ProductSpecServivces;
+using beSQLSugar.Application.Services.ProductStorageServices;
+using beSQLSugar.Infrastructure;
 using beSQLSugar.Infrastructure.Database;
 using beSQLSugar.Infrastructure.Repositories;
+using beSQLSugar.Infrastructure.Repositories.AdminRepository;
+using beSQLSugar.Infrastructure.Repositories.CategoryRepository;
+using beSQLSugar.Infrastructure.Repositories.Contacts;
+using beSQLSugar.Infrastructure.Repositories.HeroSectionProducts;
+using beSQLSugar.Infrastructure.Repositories.HeroSections;
+using beSQLSugar.Infrastructure.Repositories.Images;
+using beSQLSugar.Infrastructure.Repositories.Partners;
+using beSQLSugar.Infrastructure.Repositories.ProductColors;
+using beSQLSugar.Infrastructure.Repositories.ProductMedias;
+using beSQLSugar.Infrastructure.Repositories.Products;
+using beSQLSugar.Infrastructure.Repositories.ProductSpecs;
+using beSQLSugar.Infrastructure.Repositories.ProductStorages;
+using beSQLSugar.Infrastructure.Repository.CategoryRepository;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -69,11 +93,45 @@ builder.Services.AddScoped<IAdminUserService, AdminUserService>();
 builder.Services.AddScoped<IHeroSectionRepository, HeroSectionRepository>();
 builder.Services.AddScoped<IHeroSectionService, HeroSectionService>();
 
+builder.Services.AddScoped<IHeroSectionProductRepository, HeroSectionProductRepository>();
+builder.Services.AddScoped<IHeroSectionProductService, HeroSectionProductService>();
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.AddScoped<IProductSpecRepository, ProductSpecRepository>();
+builder.Services.AddScoped<IProductSpecService, ProductSpecService>();
+
+builder.Services.AddScoped<IProductMediaRepository, ProductMediaRepository>();
+builder.Services.AddScoped<IProductMediaService, ProductMediaService>();
+
+builder.Services.AddScoped<IProductColorRepository, ProductColorRepository>();
+builder.Services.AddScoped<IProductColorService, ProductColorService>();
+
+builder.Services.AddScoped<IProductStorageRepository, ProductStorageRepository>();
+builder.Services.AddScoped<IProductStorageService, ProductStorageService>();
+
+builder.Services.AddScoped<IContactRepository, ContactRepository>();
+builder.Services.AddScoped<IContactService, ContactService>();
+
+builder.Services.AddScoped<IPartnerRepository, PartnerRepository>();
+builder.Services.AddScoped<IPartnerService, PartnerService>();
+
+builder.Services.AddScoped<IImageRepository, ImageRepository>();
+builder.Services.AddScoped<IAnalyzerImageSerivce, AnalyzerImageService>();
+builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IImageToGridService, ImageToGridService>();
+builder.Services.AddScoped<IPathFindingService, PathFindingService>();
+
+
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJWTService, JWTService>();
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IUserContextService, UserContextService>();
 
 // Đăng ký mediator
 builder.Services.AddMediatR(cfg =>

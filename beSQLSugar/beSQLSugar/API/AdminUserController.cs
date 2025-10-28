@@ -1,9 +1,8 @@
-﻿using beSQLSugar.Application.DTO.request;
-using beSQLSugar.Application.DTO.response;
-using beSQLSugar.Application.DTOs.request;
+﻿using beSQLSugar.Application.Dto.request.Admin;
+using beSQLSugar.Application.Dto.response.Admin;
 using beSQLSugar.Application.Features.AdminUsers.Commands;
 using beSQLSugar.Application.Features.AdminUsers.Queries;
-using beSQLSugar.Common;
+using beSQLSugar.Share.Common;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

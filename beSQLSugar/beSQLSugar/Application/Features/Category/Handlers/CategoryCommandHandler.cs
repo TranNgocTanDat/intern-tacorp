@@ -1,6 +1,6 @@
-﻿using beSQLSugar.Application.DTO.response;
+﻿using beSQLSugar.Application.Dto.response.Category;
 using beSQLSugar.Application.Features.Category.Commands;
-using beSQLSugar.Application.ServiceInterfaces;
+using beSQLSugar.Application.Services.CategoryServices;
 using MediatR;
 
 namespace beSQLSugar.Application.Features.Category.Handlers
@@ -25,7 +25,7 @@ namespace beSQLSugar.Application.Features.Category.Handlers
             if (request.Request is null)
                 throw new ArgumentNullException(nameof(request.Request));
 
-            var result = await _service.UpdateAsync(request.Id, request.Request);
+            var result = await _service.UpdateAsync(request.Id, request.Request, request.User);
             if (result is null)
                 throw new InvalidOperationException("Update failed: Category not found or update unsuccessful.");
 
@@ -34,7 +34,7 @@ namespace beSQLSugar.Application.Features.Category.Handlers
 
         public async Task<CategoryResponse> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-            var result = await _service.AddAsync(request.Request!);
+            var result = await _service.AddAsync(request.Request!, request.User);
             if (result is null)
                 throw new InvalidOperationException("Create failed: Category could not be created.");
             return result;

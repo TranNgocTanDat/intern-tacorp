@@ -1,27 +1,53 @@
 <script lang="ts" setup>
 import HeroSection from "@/pages/user/HomePage/components/HeroSection.vue";
-import ProductHot from "@/pages/user/HomePage/components/ProductHot.vue";
+import CategoryPartner from "./components/CategoryPartner.vue";
+import Promo from "./components/Promo.vue";
+import HomeTab from "./components/HomeTab.vue";
 </script>
 
 <template>
   <div class="hero-section">
-    <HeroSection />
+    <HeroSection page-hero="home" />
   </div>
-  <div class="product-hot">
-    <ProductHot />
+  <div class="category-partner">
+    <CategoryPartner />
   </div>
+  <div class="promo">
+    <Promo />
+  </div>
+  <div class="home-tab">
+    <HomeTab />
+  </div>
+
 </template>
 
 <style lang="css" scoped>
 .hero-section {
   width: 100%;
-  min-height: 100vh;
-  /* background-image: url("https://png.pngtree.com/background/20240114/original/pngtree-gadgets-in-a-striking-3d-dim-environment-picture-image_7276667.jpg"); */
+  height: 70vh;
+}
+.category-partner {
+  width: 100%;
+  min-height: 50vh;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.promo {
+  width: 100%;
+  min-height: 50vh;
+  
+}
+
+.home-tab {
+  width: 95%;
+  min-height: 50vh;
+  padding: 4rem 2rem;
 }
 
 .product-hot {
   width: 95%;
   min-height: 50vh;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 </style>

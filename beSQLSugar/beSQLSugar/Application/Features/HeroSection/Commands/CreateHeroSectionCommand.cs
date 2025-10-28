@@ -1,15 +1,19 @@
-﻿using beSQLSugar.Application.DTO.request;
-using beSQLSugar.Application.DTO.response;
+﻿using beSQLSugar.Application.Dto.request.HeroSection;
+using beSQLSugar.Application.Dto.response.HeroSection;
 using MediatR;
+using System.Security.Claims;
 
 namespace beSQLSugar.Application.Features.HeroSection.Commands
 {
     public class CreateHeroSectionCommand : IRequest<HeroSectionResponse>
     {
         public HeroSectionRequest Request { get; set; }
-        public CreateHeroSectionCommand(HeroSectionRequest request)
+        public ClaimsPrincipal User { get; set; }
+
+        public CreateHeroSectionCommand(HeroSectionRequest request, ClaimsPrincipal user)
         {
             Request = request;
+            User = user;
         }
     }
 }

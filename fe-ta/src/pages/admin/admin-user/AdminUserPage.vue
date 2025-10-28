@@ -1,107 +1,80 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import AdminForm from "./components/AdminForm.vue";
-import type { AdminUserRequest, AdminUserResponse } from "@/models/AdminUser";
-import adminApi from "@/services/adminApi";
 import AdminList from "./components/AdminList.vue";
-import { onMounted } from 'vue';
+import type { AdminUserRequest, AdminUserResponse } from "@/models/AdminUser";
+import { useAdminStore } from "@/store/adminStore";
 
-// Danh sách người dùng Admin
-const adminUser = ref<AdminUserResponse[]>([]);
-const loading = ref(false);
+// Store Pinia
+const adminStore = useAdminStore();
+
+// Dialog & selection
+const showAddModal = ref(false);
+const showEditModal = ref(false);
+const showDeleteModal = ref(false);
 const selectedUser = ref<AdminUserResponse | null>(null);
 const selectedUserId = ref<number | null>(null);
 
-// Biến điều khiển hiển thị dialog tạo mới
-const showAddModal = ref(false);
+// Ref AdminList để commit proxy query (nếu dùng VXE Grid)
+const adminUserRef = ref<any>(null);
 
-// hiển thị dialog edit
-const showEditModal = ref(false);
-
-// hiển thị dialog delete
-const showDeleteModal = ref(false);
-
-// Hàm xử lý tạo mới admin
-const loadUsers = async () => {
-  try {
-    const res = await adminApi.getAllAdmin();
-    adminUser.value = res;
-  } catch (err) {
-    console.error('Load users failed', err);
-  }
-};
-
-onMounted(() => {
-  loadUsers();
-});
-
+/* ------------------- CREATE ------------------- */
 const handleCreateUser = async (request: AdminUserRequest) => {
-  loading.value = true;
   try {
-    await adminApi.createAdmin(request);
-    // refresh list after create
-    await loadUsers();
+    await adminStore.createAdmin(request);
     showAddModal.value = false;
-  } catch (error) {
-    console.error("Lỗi khi tạo người dùng:", error);
+    // refresh list grid
+    adminUserRef.value?.gridRef?.commitProxy("query");
+  } catch (err) {
     alert("Đã xảy ra lỗi khi tạo người dùng.");
-  } finally {
-    loading.value = false;
   }
 };
 
-const handleOpenEditUser = async (user: AdminUserResponse) => {
-  showEditModal.value = true;
+/* ------------------- EDIT ------------------- */
+const handleOpenEditUser = (user: AdminUserResponse) => {
   selectedUser.value = { ...user };
+  showEditModal.value = true;
 };
 
-// Hàm xử lý sửa admin
 const handleEditUser = async (request: AdminUserRequest) => {
   if (!selectedUser.value) return;
+
   try {
-    const response = await adminApi.updateAdmin(selectedUser.value.id, request);
-    const index = adminUser.value.findIndex((user) => user.id === response.id);
-    if (index !== -1) {
-      adminUser.value[index] = response;
-    }
+    await adminStore.updateAdmin(selectedUser.value.id, request);
     showEditModal.value = false;
     selectedUser.value = null;
-    await loadUsers();
-  } catch (error) {
-    console.error("Lỗi khi cập nhật người dùng:", error);
+    adminUserRef.value?.gridRef?.commitProxy("query");
+  } catch (err) {
     alert("Đã xảy ra lỗi khi cập nhật người dùng.");
-  } finally {
-    loading.value = false;
   }
 };
 
-const handleOpenDeleteUser = async (id: number) => {
-  showDeleteModal.value = true;
+/* ------------------- DELETE ------------------- */
+const handleOpenDeleteUser = (id: number) => {
   selectedUserId.value = id;
+  showDeleteModal.value = true;
 };
-// Hàm xử lý xoá admin
+
 const handleDeleteUser = async (id: number) => {
   try {
-    await adminApi.deleteAdmin(id);
-    await loadUsers();
+    await adminStore.deleteAdmin(id);
     showDeleteModal.value = false;
-  } catch (error) {
-    console.error("Lỗi khi xoá người dùng:", error);
+    selectedUserId.value = null;
+    adminUserRef.value?.gridRef?.commitProxy("query");
+  } catch (err) {
     alert("Đã xảy ra lỗi khi xoá người dùng.");
   }
 };
 </script>
 
 <template>
-  <div class="p-6">
-    <h1 class="text-2xl font-bold mb-4">Trang quản lý Admin Users</h1>
+  <div class="management-page">
+    <div class="page-top flex justify-between items-center mb-4">
+      <h1 class="title-page text-xl font-bold">Admin Users</h1>
+      <el-button type="primary" @click="showAddModal = true">Thêm mới Admin</el-button>
+    </div>
 
-    <!-- Nút mở dialog -->
-    <el-button type="primary" @click="showAddModal = true"
-      >Thêm mới Admin</el-button
-    >
-
-    <!-- Dialog tạo mới admin -->
+    <!-- Dialog Create -->
     <AdminForm
       :visible="showAddModal"
       @update:visible="showAddModal = $event"
@@ -110,69 +83,51 @@ const handleDeleteUser = async (id: number) => {
       @submit-form="handleCreateUser"
     />
 
-    <!-- Dialog tạo mới admin -->
+    <!-- Dialog Edit -->
     <AdminForm
       :visible="showEditModal"
       @update:visible="showEditModal = $event"
       :initialData="selectedUser"
-      mode="create"
+      mode="update"
       @submit-form="handleEditUser"
     />
-    <div
-      v-if="showDeleteModal"
-      style="
-        background-color: rgba(255, 255, 255, 0.5);
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px;
-        z-index: 1000;
-      "
+
+    <!-- Dialog Delete -->
+    <el-dialog
+      v-model="showDeleteModal"
+      title="Xác nhận xoá"
+      width="400px"
+      :close-on-click-modal="false"
+      :close-on-press-escape="false"
     >
-      <div
-        style="
-          width: 400px;
-          height: 300px;
-          background-color: white;
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        <h2 style="top: 0; margin-bottom: 30px">
-          Bạn có muốn xóa loại thiết bị không
-        </h2>
-        <div style="margin-top: 30px">
-          <button
-            class="px-4 py-2 bg-black text-white rounded mr-4"
-            @click="handleDeleteUser(selectedUserId!)"
-          >
-            Có
-          </button>
-          <button
-            class="px-4 py-2 bg-black text-white rounded"
-            @click="showDeleteModal = false"
-          >
-            Không
-          </button>
-        </div>
-      </div>
-    </div>
+      <span>Bạn có muốn xoá người dùng này không?</span>
+      <template #footer>
+        <el-button @click="showDeleteModal = false">Không</el-button>
+        <el-button
+          type="danger"
+          @click="handleDeleteUser(selectedUserId!)"
+        >
+          Có
+        </el-button>
+      </template>
+    </el-dialog>
+
+    <!-- Admin List -->
+    <AdminList
+      ref="adminUserRef"
+      @edit-admin-user="handleOpenEditUser"
+      @delete-admin-user="handleOpenDeleteUser"
+    />
   </div>
-
-
-  <AdminList
-    :items="adminUser"
-    @edit-admin-user="handleOpenEditUser"
-    @delete-admin-user="handleOpenDeleteUser"
-  />
 </template>
+
+<style scoped>
+.management-page {
+  padding: 1rem;
+}
+.page-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>

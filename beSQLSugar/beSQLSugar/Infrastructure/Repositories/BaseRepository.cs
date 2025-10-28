@@ -1,5 +1,4 @@
-﻿using beSQLSugar.Domain.Interfaces;
-using beSQLSugar.Infrastructure.Database;
+﻿using beSQLSugar.Infrastructure.Database;
 using SqlSugar;
 
 namespace beSQLSugar.Infrastructure.Repositories
@@ -21,6 +20,7 @@ namespace beSQLSugar.Infrastructure.Repositories
         public async Task<T?> AddAsync(T entity)
         {
             var id = await _context.Db.Insertable(entity).ExecuteReturnIdentityAsync();
+
             var insertedEntity = await _context.Db.Queryable<T>().InSingleAsync(id);
                 return insertedEntity!;
             

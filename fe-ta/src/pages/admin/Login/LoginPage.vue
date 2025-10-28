@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import type { LoginRequest } from "@/models/Authentication";
-import router from "@/router/Router";
-import auth from "@/services/auth";
+import { useAuthStore } from "@/store/authStore";
+
+const authStore = useAuthStore();
 
 const loginForm = ref<LoginRequest>({
   username: "",
@@ -11,14 +12,11 @@ const loginForm = ref<LoginRequest>({
 
 const handleLogin = async () => {
   try {
-    const response = await auth.login(loginForm.value);
-    localStorage.setItem("token", response.accessToken);
-    router.push("/dashboard");
+    await authStore.login(loginForm.value);
   } catch (error) {
-    console.error("Lỗi khi đăng nhập:", error);
     alert("Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.");
   }
-}
+};
 </script>
 
 <template>

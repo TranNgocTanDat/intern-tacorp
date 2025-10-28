@@ -1,10 +1,11 @@
-﻿using beSQLSugar.Application.DTO.request;
-using beSQLSugar.Application.DTO.response;
-using beSQLSugar.Application.DTOs.request;
+﻿using beSQLSugar.Application.Dto.request.HeroSection;
+using beSQLSugar.Application.Dto.response.HeroSection;
 using beSQLSugar.Application.Features.HeroSection.Commands;
 using beSQLSugar.Application.Features.HeroSection.Queries;
-using beSQLSugar.Common;
+using beSQLSugar.Infrastructure.Database.Enities;
+using beSQLSugar.Share.Common;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace beSQLSugar.API
@@ -22,10 +23,11 @@ namespace beSQLSugar.API
         // Thêm mới HeroSection
         [HttpPost]
         [Consumes("multipart/form-data")]
+        [Authorize(Roles = "Admin")]
         public async Task<APIResponse<HeroSectionResponse>> CreateHeroSection([FromForm] HeroSectionRequest request)
         {
             // Tạo command và gửi qua mediator
-            var command = new CreateHeroSectionCommand(request);
+            var command = new CreateHeroSectionCommand(request, User);
 
             // Nhận kết quả từ handler
             var result = await _mediator.Send(command);
@@ -37,10 +39,11 @@ namespace beSQLSugar.API
         // Update HeroSection
         [HttpPut("{id}")]
         [Consumes("multipart/form-data")]
+        [Authorize(Roles = "Admin")]
         public async Task<APIResponse<HeroSectionResponse?>> UpdateHeroSection(int id, [FromForm] HeroSectionRequest request)
         {
             // Tạo command và gửi qua mediator
-            var command = new UpdateHeroSectionCommand(id, request);
+            var command = new UpdateHeroSectionCommand(id, request, User);
             // Nhận kết quả từ handler
             var result = await _mediator.Send(command);
             // Kiểm tra kết quả và trả về response
@@ -67,35 +70,7 @@ namespace beSQLSugar.API
             return APIResponse<bool>.Success(result, "Xóa Hero section thành công.");
         }
 
-        // Lấy HeroSection theo id
-        [HttpGet("{id}")]
-        public async Task<APIResponse<HeroSectionResponse?>> GetHeroSectionById(int id)
-        {
-            // Tạo query và gửi qua mediator
-            var query = new GetHeroSectionByIdQuery(id);
-            // Nhận kết quả từ handler
-            var result = await _mediator.Send(query);
-            // Kiểm tra và trả về response
-            if (result == null)
-            {
-                return APIResponse<HeroSectionResponse?>.NotFound("Không tìm thấy Hero section với ID này.");
-            }
-            return APIResponse<HeroSectionResponse?>.Success(result, "Lấy dữ liệu thành công.");
-        }
 
-        // Lấy tất cả HeroSection
-        [HttpGet]
-        public async Task<APIResponse<List<HeroSectionResponse>>> GetAllHeroSection()
-        {
-            // Tạo query và gửi qua mediator
-            var query = new GetAllHeroSectionQuery();
-
-            // Nhận kết quả từ handler
-            var result = await _mediator.Send(query);
-
-            // Trả vể response
-            return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy danh sách thành công");
-        }
 
         // Filter HeroSection theo các tiêu chí trong request
         [HttpGet("filter")]
@@ -106,5 +81,46 @@ namespace beSQLSugar.API
             return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy dữ liệu thành công.");
         }
 
+        // Lấy HeroSection theo id kèm chi tiết
+        [HttpGet("{id}/details")]
+        public async Task<APIResponse<HeroSectionResponse?>> GetWithDetails(int id)
+        {
+            var query = new GetHeroSectionWithDetailsQuery(id);
+            var result = await _mediator.Send(new GetHeroSectionWithDetailsQuery(id));
+            if (result == null)
+            {
+                return APIResponse<HeroSectionResponse?>.NotFound("Không tìm thấy Hero section với ID này.");
+            }
+            return APIResponse<HeroSectionResponse?>.Success(result, "Lấy dữ liệu thành công.");
+        }
+
+        // Lấy tất cả HeroSection kèm chi tiết
+        [HttpGet("details")]
+        public async Task<APIResponse<List<HeroSectionResponse>>> GetAllWithDetails()
+        {
+            var query = new GetAllWithDetailsQuery();
+            var result = await _mediator.Send(query);
+            if (result == null || result.Count == 0)
+            {
+                return APIResponse<List<HeroSectionResponse>>.NotFound("Không tìm thấy Hero section nào.");
+            }
+            return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy dữ liệu thành công.");
+
+        }
+
+        // Lấy HeroSection theo pageHero
+        [HttpGet("{pageHero}/pageHero")]
+        public async Task<APIResponse<List<HeroSectionResponse>>> GetHeroSectionsWithPageHero(string pageHero)
+        {
+            var query = new GetHeroSectionWithPageHeroQuery(pageHero);
+            var result = await _mediator.Send(query);
+            if (result == null )
+            {
+                return APIResponse<List<HeroSectionResponse>>.NotFound("Không tìm thấy Hero section với pageHero này.");
+            }
+            return APIResponse<List<HeroSectionResponse>>.Success(result, "Lấy dữ liệu thành công.");
+
+
+        }
     }
 }

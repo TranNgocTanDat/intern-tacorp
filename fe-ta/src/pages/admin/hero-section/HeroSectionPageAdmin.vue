@@ -3,13 +3,13 @@ import type {
   HeroSectionRequest,
   HeroSectionResponse,
 } from "@/models/HeroSection";
-import HeroSectionFrom from "./components/HeroSectionFrom.vue";
-import { onMounted, ref } from "vue";
+import HeroSectionFrom from "./components/HeroSectionForm.vue";
+import { ref } from "vue";
 import heroSectionApi from "@/services/heroSectionApi";
 import HeroSectionList from "./components/HeroSectionList.vue";
+import { useHeroSectionStore } from "@/store/heroSectionStore";
 
 // Danh sách HeroSection
-const heroSections = ref<HeroSectionResponse[]>([]);
 const loading = ref(false);
 const selectedHeroSection = ref<HeroSectionResponse | null>(null);
 const selectedHeroSectionId = ref<number | null>(null);
@@ -21,29 +21,20 @@ const showEditModal = ref(false);
 // hiển thị dialog delete
 const showDeleteModal = ref(false);
 
-// Load HeroSections
-const loadingHeroSections = async () => {
-  try {
-    const res = await heroSectionApi.getAllHeroSections();
-    heroSections.value = res;
-  } catch (err) {
-    console.error("Load hero sections failed", err);
-  }
-};
+const heroListRef = ref<any>(null);
 
-onMounted(() => {
-  loadingHeroSections();
-});
+const heroSectionStore = useHeroSectionStore();
+
 
 // Hàm xử lý tạo mới HeroSection
 const handleCreateHeroSection = async (request: HeroSectionRequest) => {
   loading.value = true;
   try {
-    await heroSectionApi.createHeroSection(request);
-
-    // refresh list after create
-    await loadingHeroSections();
+    await heroSectionStore.create(request);
     showAddModal.value = false;
+
+    // Gọi lại vxe-grid query
+    heroListRef.value?.gridRef?.commitProxy("query");
   } catch (error) {
     console.error("Lỗi khi tạo HeroSection:", error);
     alert("Đã xảy ra lỗi khi tạo HeroSection.");
@@ -61,13 +52,11 @@ const handleOpenEditHeroSection = async (hero: HeroSectionResponse) => {
 const handleEditHeroSection = async (request: HeroSectionRequest) => {
   if (!selectedHeroSection.value) return;
   try {
-    await heroSectionApi.updateHeroSection(
-      selectedHeroSection.value.id,
-      request
-    );
-    // refresh list after create
-    await loadingHeroSections();
+    heroSectionStore.update(selectedHeroSection.value.id, request);
+
     showEditModal.value = false;
+    // Gọi lại vxe-grid query
+    heroListRef.value?.gridRef?.commitProxy("query");
   } catch (error) {
     console.error("Lỗi khi sửa HeroSection:", error);
     alert("Đã xảy ra lỗi khi sửa HeroSection.");
@@ -82,10 +71,11 @@ const handleOpenDeleteHeroSection = async (id: number) => {
 const handleDeleteHeroSection = async (id: number) => {
   try {
     await heroSectionApi.deleteHeroSection(id);
-    // refresh list after create
-    await loadingHeroSections();
     showDeleteModal.value = false;
+
     selectedHeroSectionId.value = null;
+    // Gọi lại vxe-grid query
+    heroListRef.value?.gridRef?.commitProxy("query");
   } catch (error) {
     console.error("Lỗi khi xoá HeroSection:", error);
     alert("Đã xảy ra lỗi khi xoá HeroSection.");
@@ -94,13 +84,15 @@ const handleDeleteHeroSection = async (id: number) => {
 </script>
 
 <template>
-  <div>
-    <h1 class="text-2xl font-bold mb-4">Trang quản lý Admin Users</h1>
+  <div class="management-page">
+    <div class="page-top">
+      <h1 class="title-page">HeroSections</h1>
 
-    <!-- Nút mở dialog -->
-    <el-button type="primary" @click="showAddModal = true"
-      >Thêm mới Admin</el-button
-    >
+      <!-- Nút mở dialog -->
+      <el-button class="btn-add" type="primary" @click="showAddModal = true"
+        >Thêm mới Admin</el-button
+      >
+    </div>
     <HeroSectionFrom
       :visible="showAddModal"
       mode="create"
@@ -164,13 +156,13 @@ const handleDeleteHeroSection = async (id: number) => {
         </div>
       </div>
     </div>
-  </div>
-  <HeroSectionList
-    :heroSections="heroSections"
-    :loading="loading"
-    @edit-hero-section="handleOpenEditHeroSection"
-    @delete-hero-section="handleOpenDeleteHeroSection"
+    <HeroSectionList
+      ref="heroListRef"
+      :loading="loading"
+      @edit-hero-section="handleOpenEditHeroSection"
+      @delete-hero-section="handleOpenDeleteHeroSection"
     />
+  </div>
 </template>
 
 <style lang="css" scoped></style>

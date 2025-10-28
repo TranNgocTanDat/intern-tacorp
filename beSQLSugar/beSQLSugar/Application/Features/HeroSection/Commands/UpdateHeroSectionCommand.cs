@@ -1,6 +1,7 @@
-﻿using beSQLSugar.Application.DTO.request;
-using beSQLSugar.Application.DTO.response;
+﻿using beSQLSugar.Application.Dto.request.HeroSection;
+using beSQLSugar.Application.Dto.response.HeroSection;
 using MediatR;
+using System.Security.Claims;
 
 namespace beSQLSugar.Application.Features.HeroSection.Commands
 {
@@ -8,10 +9,13 @@ namespace beSQLSugar.Application.Features.HeroSection.Commands
     {
         public int Id { get; set; }
         public HeroSectionRequest? Request { get; set; }
-        public UpdateHeroSectionCommand(int id, HeroSectionRequest? request)
+        public ClaimsPrincipal User { get; set; }
+
+        public UpdateHeroSectionCommand(int id, HeroSectionRequest? request, ClaimsPrincipal user)
         {
             Id = id;
             Request = request;
+            User = user;
         }
     }
 }

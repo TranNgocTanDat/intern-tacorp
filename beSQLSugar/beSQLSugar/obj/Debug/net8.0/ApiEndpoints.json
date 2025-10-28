@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Admin.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -29,13 +29,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "beSQLSugar.Application.DTO.request.AdminUserRequest",
+        "Type": "beSQLSugar.Application.Dto.request.Admin.AdminUserRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Admin.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Admin.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -86,13 +86,13 @@
       },
       {
         "Name": "request",
-        "Type": "beSQLSugar.Application.DTO.request.AdminUserRequest",
+        "Type": "beSQLSugar.Application.Dto.request.Admin.AdminUserRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Admin.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -154,7 +154,64 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Admin.AdminUserResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.AnalyzeImageController",
+    "Method": "AddAsync",
+    "RelativePath": "api/analyzed-image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FilePathUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilePathMap",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.AnalyzeImage.AnalyzeImageResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.AnalyzeImageController",
+    "Method": "FindPath",
+    "RelativePath": "api/analyzed-image/find-path",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.AnalyzeImage.FindPathRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.AnalyzeImage.FindPathResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -174,13 +231,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "beSQLSugar.Application.DTOs.request.LoginRequest",
+        "Type": "beSQLSugar.Application.Dto.request.Auth.LoginRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTOs.response.LoginResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Auth.LoginResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -210,13 +267,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "beSQLSugar.Application.DTO.request.CategoryRequest",
+        "Type": "beSQLSugar.Application.Dto.request.Category.CategoryRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Category.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -236,7 +293,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Category.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -262,33 +319,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "beSQLSugar.API.CategoryController",
-    "Method": "GetCategoryById",
-    "RelativePath": "api/categories/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -313,13 +344,59 @@
       },
       {
         "Name": "request",
-        "Type": "beSQLSugar.Application.DTO.request.CategoryRequest",
+        "Type": "beSQLSugar.Application.Dto.request.Category.CategoryRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Category.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.CategoryController",
+    "Method": "GetCategoryWithProducts",
+    "RelativePath": "api/categories/{id}/with-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Category.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.CategoryController",
+    "Method": "GetCategoryChildren",
+    "RelativePath": "api/categories/children",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Category.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -351,11 +428,302 @@
         "Name": "IsActive",
         "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
+      },
+      {
+        "Name": "ParentId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateTimeFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateTimeTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Category.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.CategoryController",
+    "Method": "GetAllWithDetails",
+    "RelativePath": "api/categories/with-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Category.CategoryResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ContactController",
+    "Method": "CreateContact",
+    "RelativePath": "api/contact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.Contact.ContactRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Contact.ContactResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ContactController",
+    "Method": "GetAllWithProduct",
+    "RelativePath": "api/contact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Contact.ContactResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ContactController",
+    "Method": "DeleteContact",
+    "RelativePath": "api/contact/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ContactController",
+    "Method": "GetByIdWithProduct",
+    "RelativePath": "api/contact/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Contact.ContactResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ContactController",
+    "Method": "UpdateContactStatus",
+    "RelativePath": "api/contact/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.Contact.UpdateContactStatusRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Contact.ContactResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ContactController",
+    "Method": "FilterContacts",
+    "RelativePath": "api/contact/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fullname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserNote",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HandleByAdminId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AdminNote",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WriteIUid",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Contact.ContactResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ContactController",
+    "Method": "GetByStatus",
+    "RelativePath": "api/contact/status/{status}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Contact.ContactResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -409,54 +777,14 @@
         "IsRequired": false
       },
       {
-        "Name": "CreateUid",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "WriteIUid",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "UpdateTime",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
         "Name": "Note",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option1",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option2",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option3",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option4",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option5",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.HeroSection.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -467,16 +795,212 @@
     ]
   },
   {
-    "ContainingType": "beSQLSugar.API.HeroSectionController",
-    "Method": "GetAllHeroSection",
-    "RelativePath": "api/hero-section",
+    "ContainingType": "beSQLSugar.API.HeroSectionProductController",
+    "Method": "Create",
+    "RelativePath": "api/hero-section-products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.HeroSectionProduct.HeroSectionProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.HeroSectionProduct.HeroSectionProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionProductController",
+    "Method": "GetAllHeroSectionProduct",
+    "RelativePath": "api/hero-section-products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.HeroSectionProduct.HeroSectionProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionProductController",
+    "Method": "Update",
+    "RelativePath": "api/hero-section-products/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.HeroSectionProduct.HeroSectionProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.HeroSectionProduct.HeroSectionProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionProductController",
+    "Method": "Delete",
+    "RelativePath": "api/hero-section-products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionProductController",
+    "Method": "Filter",
+    "RelativePath": "api/hero-section-products/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "HeroSectionTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateTimeFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateTimeTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.HeroSectionProduct.HeroSectionProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionProductController",
+    "Method": "GetByHeroSectionId",
+    "RelativePath": "api/hero-section-products/herosection/{heroSectionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "heroSectionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.HeroSectionProduct.HeroSectionProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionProductController",
+    "Method": "GetByHeroSectionAndProduct",
+    "RelativePath": "api/hero-section-products/herosection/{heroSectionId}/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "heroSectionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Application.Dto.response.HeroSectionProduct.HeroSectionProductResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -535,54 +1059,14 @@
         "IsRequired": false
       },
       {
-        "Name": "CreateUid",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "WriteIUid",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "UpdateTime",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
         "Name": "Note",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option1",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option2",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option3",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option4",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Option5",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.HeroSection.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -608,7 +1092,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -620,8 +1104,8 @@
   },
   {
     "ContainingType": "beSQLSugar.API.HeroSectionController",
-    "Method": "GetHeroSectionById",
-    "RelativePath": "api/hero-section/{id}",
+    "Method": "GetWithDetails",
+    "RelativePath": "api/hero-section/{id}/details",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -634,7 +1118,53 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.HeroSection.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionController",
+    "Method": "GetHeroSectionsWithPageHero",
+    "RelativePath": "api/hero-section/{pageHero}/pageHero",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageHero",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.HeroSection.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.HeroSectionController",
+    "Method": "GetAllWithDetails",
+    "RelativePath": "api/hero-section/details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.HeroSection.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -681,11 +1211,1453 @@
         "Name": "PublishTo",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "beSQLSugar.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.DTO.response.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.HeroSection.HeroSectionResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductMediaController",
+    "Method": "GetAllMedia",
+    "RelativePath": "api/media",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductMedia.ProductMediaResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductMediaController",
+    "Method": "DeleteMedia",
+    "RelativePath": "api/media/{mediaId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mediaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductMediaController",
+    "Method": "UpdateMedia",
+    "RelativePath": "api/media/{mediaId}/product/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mediaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "MediaFileUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ColorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MediaType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsPrimary",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "DescriptionMedia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductMedia.ProductMediaResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductMediaController",
+    "Method": "FilterMedia",
+    "RelativePath": "api/media/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DescriptionMedia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MediaFileUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MediaType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsPrimary",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductMedia.ProductMediaResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductMediaController",
+    "Method": "GetMedia",
+    "RelativePath": "api/media/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductMedia.ProductMediaResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductMediaController",
+    "Method": "AddMedia",
+    "RelativePath": "api/media/product/{productId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "MediaFileUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ColorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MediaType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsPrimary",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "DescriptionMedia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductMedia.ProductMediaResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.PartnerController",
+    "Method": "CreatePartner",
+    "RelativePath": "api/partners",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LogoFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImgDefaultFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImgHoverFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Link",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Partner.PartnerResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.PartnerController",
+    "Method": "GetAllPartners",
+    "RelativePath": "api/partners",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Partner.PartnerResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.PartnerController",
+    "Method": "UpdatePartner",
+    "RelativePath": "api/partners/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LogoFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImgDefaultFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImgHoverFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Link",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Partner.PartnerResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.PartnerController",
+    "Method": "DeletePartner",
+    "RelativePath": "api/partners/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.PartnerController",
+    "Method": "GetPartnerById",
+    "RelativePath": "api/partners/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Partner.PartnerResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.PartnerController",
+    "Method": "FilterPartners",
+    "RelativePath": "api/partners/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateTimeFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateTimeTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Partner.PartnerResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.Product.ProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Product.ProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductColorController",
+    "Method": "GetAllColors",
+    "RelativePath": "api/product-color",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductColor.ProductColorResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductColorController",
+    "Method": "CreateProductColor",
+    "RelativePath": "api/product-color",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.ProductColor.ProductColorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductColor.ProductColorResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductColorController",
+    "Method": "GetColorsByProductId",
+    "RelativePath": "api/product-color/{colorId}/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "colorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductColor.ProductColorResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductColorController",
+    "Method": "UpdateProductColor",
+    "RelativePath": "api/product-color/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.ProductColor.ProductColorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductColor.ProductColorResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductColorController",
+    "Method": "DeleteProductColor",
+    "RelativePath": "api/product-color/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductColorController",
+    "Method": "FilterProductColors",
+    "RelativePath": "api/product-color/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ColorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ColorCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAvailable",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductColor.ProductColorResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductColorController",
+    "Method": "GetColorsByProductId",
+    "RelativePath": "api/product-color/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductColor.ProductColorResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductStorageController",
+    "Method": "GetListWithProduct",
+    "RelativePath": "api/product-storage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductStorage.ProductStorageResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductStorageController",
+    "Method": "Create",
+    "RelativePath": "api/product-storage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.ProductStorage.ProductStorageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductStorage.ProductStorageResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductStorageController",
+    "Method": "Update",
+    "RelativePath": "api/product-storage/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.ProductStorage.ProductStorageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductStorage.ProductStorageResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductStorageController",
+    "Method": "Delete",
+    "RelativePath": "api/product-storage/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductStorageController",
+    "Method": "Filter",
+    "RelativePath": "api/product-storage/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StorageName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AdditionalPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductStorage.ProductStorageResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductStorageController",
+    "Method": "GetColorsByProductId",
+    "RelativePath": "api/product-storage/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductStorage.ProductStorageResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.Product.ProductRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Product.ProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductController",
+    "Method": "GetProductWithDetails",
+    "RelativePath": "api/product/{id}/details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Product.ProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductController",
+    "Method": "GetFeaturedProducts",
+    "RelativePath": "api/product/featured",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Product.ProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductController",
+    "Method": "FilterProducts",
+    "RelativePath": "api/product/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShortDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LongDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsFeatured",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinViewsCount",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxViewsCount",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.Product.ProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductController",
+    "Method": "GetProductBySlug",
+    "RelativePath": "api/product/slug/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.Product.ProductResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductSpecController",
+    "Method": "GetAllProductSpecs",
+    "RelativePath": "api/spec",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductSpec.ProductSpecResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductSpecController",
+    "Method": "DeleteProductSpec",
+    "RelativePath": "api/spec/{specId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "specId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductSpecController",
+    "Method": "UpdateProductSpec",
+    "RelativePath": "api/spec/{specId}/product/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "specId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.ProductSpec.ProductSpecRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductSpec.ProductSpecResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductSpecController",
+    "Method": "FilterProductSpecs",
+    "RelativePath": "api/spec/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpecKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpecValue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderIndex",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToUpdateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductSpec.ProductSpecResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductSpecController",
+    "Method": "GetProductSpecs",
+    "RelativePath": "api/spec/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[System.Collections.Generic.List\u00601[[beSQLSugar.Application.Dto.response.ProductSpec.ProductSpecResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "beSQLSugar.API.ProductSpecController",
+    "Method": "AddProductSpec",
+    "RelativePath": "api/spec/product/{productId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "beSQLSugar.Application.Dto.request.ProductSpec.ProductSpecRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "beSQLSugar.Share.Common.APIResponse\u00601[[beSQLSugar.Application.Dto.response.ProductSpec.ProductSpecResponse, beSQLSugar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

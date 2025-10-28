@@ -233,3 +233,8 @@ D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\obj\Debug\net8.0\beSQ
 D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\obj\Debug\net8.0\ref\beSQLSugar.dll
 D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\beSQLSugar.staticwebassets.runtime.json
+D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\OpenCvSharp.dll
+D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\runtimes\win-x64\native\OpenCvSharpExtern.dll
+D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\runtimes\win-x64\native\opencv_videoio_ffmpeg4110_64.dll
+D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\runtimes\win-x86\native\OpenCvSharpExtern.dll
+D:\Td-study\BackEnd\TA\intern-tacorp\beSQLSugar\beSQLSugar\bin\Debug\net8.0\runtimes\win-x86\native\opencv_videoio_ffmpeg4110.dll

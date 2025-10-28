@@ -1,26 +1,46 @@
-<script setup lang="ts">
-import { RouterView, RouterLink } from "vue-router";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="admin-root">
-    <!-- Sidebar -->
-    <aside class="admin-sidebar">
-      <h2 class="brand">Quản lý hệ thống</h2>
-      <nav class="nav">
-        <RouterLink to="/dashboard" class="nav-link">Dashboard</RouterLink>
-        <RouterLink to="/admin-user" class="nav-link">Admin</RouterLink>
-        <RouterLink to="/hero-section-admin" class="nav-link">Hero Section</RouterLink>
-        <RouterLink to="/category-admin" class="nav-link">Danh mục</RouterLink>
-        <RouterLink to="/product-admin" class="nav-link">Sản phẩm</RouterLink>
-        <RouterLink to="/contact-admin" class="nav-link">Liên Hệ</RouterLink>
-        <RouterLink to="/partner-admin" class="nav-link">Đối tác</RouterLink>
-        <RouterLink to="/analytics-admin" class="nav-link">Thống kê</RouterLink>
-      </nav>
-    </aside>
+    <el-menu
+      class="el-menu-vertical-demo admin-sidebar"
+      background-color="#1f2937"
+      text-color="#fff"
+      active-text-color="#ffd04b"
+      router
+    >
+      <el-menu-item index="/dashboard">Dashboard</el-menu-item>
+      <el-menu-item index="/admin-user">Admin</el-menu-item>
 
-    <!-- Main content -->
-    <main class="admin-main">
+      <el-sub-menu index="hero-section">
+        <template #title>
+          <span>Hero Section</span>
+        </template>
+        <el-menu-item index="/hero-section-admin"
+          >Hero Section Main</el-menu-item
+        >
+        <el-menu-item index="/hero-section-product-admin"
+          >Hero Section Product</el-menu-item
+        >
+      </el-sub-menu>
+
+      <el-menu-item index="/category-admin">Danh mục</el-menu-item>
+      <el-sub-menu index="product-admin">
+        <template #title>
+          <span>Sản phẩm</span>
+        </template>
+        <el-menu-item index="/product-admin">Tất cả sản phẩm</el-menu-item>
+        <el-menu-item index="/product-media">Media</el-menu-item>
+        <el-menu-item index="/product-spec">Thông số</el-menu-item>
+        <el-menu-item index="/product-color">Màu sắc</el-menu-item>
+        <el-menu-item index="/product-storage">Bô nhớ</el-menu-item>
+      </el-sub-menu>
+      <el-menu-item index="/contact-admin">Liên hệ</el-menu-item>
+      <el-menu-item index="/partner-admin">Đối tác</el-menu-item>
+      <el-menu-item index="/analytics-admin">Thống kê</el-menu-item>
+    </el-menu>
+
+    <main class="admin-main" :style="{ width: '80%' }">
       <RouterView />
     </main>
   </div>
@@ -34,7 +54,7 @@ import { RouterView, RouterLink } from "vue-router";
   overflow: hidden;
 }
 .admin-sidebar {
-  width: 16rem; /* 64 */
+  width: 17%; /* 64 */
   background: #1f2937; /* gray-800 */
   color: #fff;
   padding: 1rem;
@@ -67,5 +87,19 @@ import { RouterView, RouterLink } from "vue-router";
   padding: 1.5rem;
   background: #f3f4f6; /* gray-100 */
   overflow-y: auto;
+}
+.nav-sub {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-sublink {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  color: #d1d5db; /* gray-300 */
+  text-decoration: none;
+  font-size: 0.875rem;
 }
 </style>

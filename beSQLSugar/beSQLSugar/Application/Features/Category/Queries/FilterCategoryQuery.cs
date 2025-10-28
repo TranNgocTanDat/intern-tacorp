@@ -1,5 +1,5 @@
-﻿using beSQLSugar.Application.DTO.response;
-using beSQLSugar.Application.DTOs.request;
+﻿using beSQLSugar.Application.Dto.request.Category;
+using beSQLSugar.Application.Dto.response.Category;
 using MediatR;
 
 namespace beSQLSugar.Application.Features.Category.Queries

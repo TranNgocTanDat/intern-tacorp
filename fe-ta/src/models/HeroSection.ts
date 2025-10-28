@@ -1,4 +1,3 @@
-import { de } from "element-plus/es/locales.mjs";
 import type { HeroSectionProductResponse } from "./HeroSectionProduct";
 
 export interface HeroSectionRequest {
@@ -9,15 +8,7 @@ export interface HeroSectionRequest {
   isPublished?: boolean;
   publishFrom?: string;
   publishTo?: string;
-  createUid?: number;
-  writeIUid?: number;
-  updateTime?: string;
   note?: string;
-  option1?: string;
-  option2?: string;
-  option3?: string;
-  option4?: string;
-  option5?: string;
 }
 
 export interface HeroSectionFilterRequest {
@@ -27,6 +18,8 @@ export interface HeroSectionFilterRequest {
   isPublished?: boolean;
   publishFrom?: string;
   publishTo?: string;
+  createdName?: string;
+  updatedName?: string;
 }
 
 export interface HeroSectionResponse {
@@ -40,7 +33,9 @@ export interface HeroSectionResponse {
   publishFrom?: string; // ISO date string
   publishTo?: string; // ISO date string
   createUid?: number;
+  createdName?: string;
   writeIUid?: number;
+  updatedName?: string;
   updateTime?: string; // ISO date string
   note?: string;
   option1?: string;
